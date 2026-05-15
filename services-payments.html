@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payments and e-money services — Hillgate Finance</title>
+  <meta name="description" content="Hillgate Finance provides SEPA and SWIFT payments, named IBANs and e-money accounts under our DNB Electronic Money Institution licence." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hg-nav" role="banner">
+    <div class="hg-nav__inner">
+      <a href="index.html" class="hg-nav__logo" aria-label="Hillgate — home"><img src="assets/logo.svg" alt="Hillgate" /></a>
+      <button class="hg-nav__toggle" aria-expanded="false" aria-controls="hg-nav-links" aria-label="Open menu"><span aria-hidden="true"></span></button>
+      <ul class="hg-nav__links" id="hg-nav-links" data-open="false">
+        <li class="hg-nav__item">
+          <button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-services">Services
+            <svg class="hg-nav__caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="hg-nav__dropdown" id="hg-nav-services" data-open="false">
+            <li><a href="services-payments.html">Payments</a></li>
+            <li><a href="services-crypto.html">Crypto</a></li>
+            <li><a href="services-convert.html">Convert</a></li>
+          </ul>
+        </li>
+        <li class="hg-nav__item"><a class="hg-nav__link" href="about.html">About</a></li>
+        <li class="hg-nav__item">
+          <button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-disclosures">Disclosures
+            <svg class="hg-nav__caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <ul class="hg-nav__dropdown" id="hg-nav-disclosures" data-open="false">
+            <li><a href="disclosures-risks.html">Risks</a></li>
+            <li><a href="disclosures-conflicts.html">Conflicts of interest</a></li>
+            <li><a href="disclosures-esg.html">ESG</a></li>
+            <li><a href="disclosures-fees.html">Fees and pricing</a></li>
+            <li><a href="disclosures-regulatory.html">Regulatory information</a></li>
+            <li><a href="disclosures-complaints.html">Complaints</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hg-nav__cta">
+        <a class="hg-nav__login" href="/open-account">Log in</a>
+        <a class="hg-button-primary" href="/open-account">Open account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hg-page-header">
+      <div class="hg-container">
+        <span class="hg-page-header__eyebrow">Services · Payments</span>
+        <h1 class="hg-page-header__title">Payments and e-money services.</h1>
+        <p class="hg-page-header__lede">
+          SEPA and SWIFT payments, named IBANs, e-money accounts and segregated client-money handling
+          for institutional and professional clients. Offered under our Electronic Money Institution
+          licence from De Nederlandsche Bank.
+        </p>
+      </div>
+    </section>
+
+    <section class="hg-page-body">
+      <div class="hg-container">
+        <div class="hg-stack hg-stack--lg">
+
+          <article class="hg-card">
+            <h2>What this service is</h2>
+            <p>
+              Hillgate offers electronic-money issuance and payment-initiation services. Eligible clients
+              receive a named IBAN in the client's own legal name, hold balances in e-money, and send
+              or receive transfers across SEPA Credit Transfer, SEPA Instant and SWIFT.
+            </p>
+            <p>
+              Client funds are safeguarded on a one-to-one basis in safeguarding accounts at supervised
+              credit institutions, separated from Hillgate's own funds in line with Article 7 of the
+              EMD2 as implemented in the Netherlands.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Who it is for</h2>
+            <ul>
+              <li>Institutional asset managers and family offices that need a named, regulated payment account.</li>
+              <li>Corporate treasury teams running multi-currency settlement and supplier payments.</li>
+              <li>Fintech partners embedding regulated payment rails under a documented programme agreement.</li>
+              <li>Professional clients within the meaning of MiFID II Annex II.</li>
+            </ul>
+            <p class="hg-panel__small">
+              We do not onboard consumer or retail clients to this service. All onboarding is subject
+              to KYC, source-of-funds and sanctions screening.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>How it works</h2>
+            <ol class="hg-steps">
+              <li>
+                <h4>Onboarding</h4>
+                <p>You submit corporate documentation, beneficial-ownership disclosures and source-of-funds evidence. We complete KYC and risk-rating before any account is opened.</p>
+              </li>
+              <li>
+                <h4>Account issued</h4>
+                <p>A named IBAN is issued in the client's legal name. Authorised users are configured with role-based access on the Hillgate platform.</p>
+              </li>
+              <li>
+                <h4>Fund the account</h4>
+                <p>You credit the IBAN by SEPA or SWIFT. Balances are held as e-money and safeguarded in segregated accounts at supervised credit institutions.</p>
+              </li>
+              <li>
+                <h4>Send and receive payments</h4>
+                <p>You execute SEPA Credit Transfer, SEPA Instant and SWIFT payments via the platform or API. Receipts post in real time with full audit trail.</p>
+              </li>
+              <li>
+                <h4>Reporting and reconciliation</h4>
+                <p>Statement exports in CAMT.053 and CSV; webhook and API endpoints for treasury and accounting reconciliation.</p>
+              </li>
+            </ol>
+          </article>
+
+          <article class="hg-card">
+            <h2>Fees</h2>
+            <p>
+              Account, transaction and FX fees are published in the fees schedule. We do not advertise
+              promotional pricing and we do not offer rebates conditional on volume of unrelated services.
+            </p>
+            <p><a class="hg-button-ghost" href="disclosures-fees.html">View fees and pricing</a></p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Risks</h2>
+            <p>
+              Payment services carry operational, technology, transfer and regulatory risk. Full risk
+              factors and how we manage each are set out in the risk disclosure.
+            </p>
+            <p><a class="hg-button-ghost" href="disclosures-risks.html">Read the risk disclosure</a></p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Regulatory basis</h2>
+            <p>
+              Payment and electronic-money services are offered by Hillgate Finance B.V. under its
+              authorisation as an Electronic Money Institution from De Nederlandsche Bank (DNB),
+              registration number <strong>WFTEG R200389</strong>. The service falls within the scope of
+              the second Payment Services Directive (PSD2) and the second Electronic Money Directive
+              (EMD2) as implemented in the Dutch <em>Wet op het financieel toezicht</em> (Wft).
+            </p>
+            <p>
+              Supervisory contact for these services: De Nederlandsche Bank, Spaklerweg 4, 1096 BA
+              Amsterdam.
+            </p>
+            <p class="hg-panel__small">
+              Crypto-asset services are not offered under this licence. See the <a href="services-crypto.html">Crypto</a> page for the CASP-authorised service.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hg-footer" role="contentinfo">
+    <div class="hg-container">
+      <div class="hg-footer__grid">
+        <div class="hg-footer__brand">
+          <img src="assets/logo-white.svg" alt="Hillgate" />
+          <p class="hg-footer__tagline">Hillgate Finance B.V. — regulated payments, crypto-asset services and conversion for institutional and professional clients.</p>
+        </div>
+        <div class="hg-footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-payments.html">Payments</a></li>
+            <li><a href="services-crypto.html">Crypto</a></li>
+            <li><a href="services-convert.html">Convert</a></li>
+          </ul>
+        </div>
+        <div class="hg-footer__col">
+          <h4>Disclosures</h4>
+          <ul>
+            <li><a href="disclosures-risks.html">Risks</a></li>
+            <li><a href="disclosures-conflicts.html">Conflicts of interest</a></li>
+            <li><a href="disclosures-esg.html">ESG</a></li>
+            <li><a href="disclosures-fees.html">Fees and pricing</a></li>
+            <li><a href="disclosures-regulatory.html">Regulatory information</a></li>
+            <li><a href="disclosures-complaints.html">Complaints</a></li>
+          </ul>
+        </div>
+        <div class="hg-footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="legal.html">Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hg-footer__legal">
+        <p class="hg-footer__disclosure">Payment and electronic money services are provided by Hillgate Finance B.V., authorised by De Nederlandsche Bank as an Electronic Money Institution, registration number WFTEG R200389.</p>
+        <p class="hg-footer__disclosure">Crypto-asset services are provided by Hillgate Finance B.V., authorised <!-- TODO: confirm post-authorisation phrasing -->by the Autoriteit Financiële Markten as a Crypto-Asset Service Provider under Regulation (EU) 2023/1114, registration number [TODO: AFM number].</p>
+      </div>
+      <div class="hg-footer__bottom">
+        <span>© 2026 Hillgate Finance B.V. All rights reserved.</span>
+        <ul class="hg-footer__bottom-links">
+          <li><a href="legal.html#terms">Terms</a></li>
+          <li><a href="legal.html#privacy">Privacy</a></li>
+          <li><a href="legal.html#cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
