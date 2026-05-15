@@ -30,7 +30,7 @@
     <section class="hg-page-body">
       <div class="hg-container">
 
-        <aside class="hg-regime-banner" aria-label="Regulatory regime for this product">
+        <aside class="hg-regime-banner" aria-label="Regulatory regime for this product" data-rfi="Q16" data-rfi-label="Q16 · Regime banner names the licence">
           <span class="hg-regime-banner__label">Provided under</span>
           <div class="hg-regime-banner__pills">
             <span class="hg-pill hg-pill--active"><span class="hg-pill__dot"></span>Electronic Money Institution authorisation (fiat legs, DNB register WFTEG R200389)</span>
@@ -75,6 +75,19 @@
               No retail counterparties. Membership requires institutional onboarding, signed
               network rules and acceptance into the membership register.
             </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Use cases</h2>
+            <p style="color: var(--hg-muted); margin-bottom: var(--hg-s-3);">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, multilateral settlement among institutional members.</li>
+              <li>Sed do eiusmod tempor, replacement of bilateral cash settlement arrangements.</li>
+              <li>Ut enim ad minim veniam, future delivery-versus-payment settlement once crypto legs are authorised.</li>
+            </ul>
           </article>
 
           <article class="hg-card">
@@ -131,11 +144,12 @@
     </section>
   </main>
 
-  <div data-regulatory-footer></div>
-  <div data-site-footer></div>
+  <div data-regulatory-footer data-rfi="Q28" data-rfi-label="Q28 · Persistent risk and licence warning"></div>
+  <div data-site-footer data-rfi="Q28" data-rfi-label="Q28 · Standing footer link set"></div>
 
   <script src="../../assets/site-nav.js"></script>
   <script src="../../assets/site-footer.js"></script>
   <script src="../../assets/regulatory-footer.js"></script>
+  <script src="../../assets/rfi-highlight.js"></script>
 </body>
 </html>

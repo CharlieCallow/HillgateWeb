@@ -48,6 +48,20 @@ regardless of how deep the current page is.
 | `/legal/privacy` | `legal/privacy/index.html` |
 | `/legal/cookies` | `legal/cookies/index.html` |
 
+## AFM RFI highlight mode
+
+The site reads as a regular institutional marketing site by default. Marketing-flavour
+sections (hero ledes, benefit cards, stats strip, persona blocks) use lorem-ipsum placeholder
+copy. The blocks that actually respond to AFM RFI Q16, Q27 and Q28 are tagged with
+`data-rfi="Q16"` (or Q27 / Q28) and a human-readable `data-rfi-label`.
+
+A floating "Highlight AFM RFI answers" button (bottom-right of every page) outlines those
+blocks in amber and stamps each with a corner badge. Toggle it on while walking an AFM
+reviewer through the site. State persists in localStorage across pages.
+
+The toggle is implemented in `assets/rfi-highlight.js` and styled by the `.hg-rfi-toggle`
+and `html[data-rfi-mode="on"] [data-rfi]` rules in `styles.css`.
+
 ## Shared chrome: single source of truth
 
 Three JS modules in `assets/`:
