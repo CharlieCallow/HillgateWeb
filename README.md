@@ -13,18 +13,17 @@ AFM MiCAR RFI questions 16, 27 and 28. Not a production site.
 
 ## Run locally
 
-Because routes use directory-`index.html` resolution, the site needs a local web server. From the
-repository root:
+The site uses relative paths, so it works two ways:
 
-```bash
-# Python 3
-python3 -m http.server 8000
+1. **Open the file directly.** Unzip the folder and double-click `index.html`. The browser
+   opens the page over `file://` and every link, asset and script resolves through relative
+   paths.
+2. **Serve it.** From the repository root, run `python3 -m http.server 8000` (or `npx serve .`),
+   then open `http://localhost:8000`. The routes match the production URL structure.
 
-# Or Node
-npx serve .
-```
-
-Then open `http://localhost:8000`.
+Each page declares its depth via `<meta name="hg-base" content="../../" />`. The nav and footer
+JS injectors read that meta value to build the right relative link to every other page,
+regardless of how deep the current page is.
 
 ## Routes
 

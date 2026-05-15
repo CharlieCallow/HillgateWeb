@@ -1,12 +1,21 @@
 /*
  * Single source-of-truth top navigation.
  *
- * Renders the sticky nav on every page and wires the dropdown / mobile menu
- * handlers against the injected markup. To change the set of links visible in
- * the header, edit this file.
+ * Each page declares its depth with <meta name="hg-base" content="../../" />
+ * so the injected links resolve correctly whether the site is opened from a
+ * web server or from the local filesystem (file://).
  */
 (function () {
   "use strict";
+
+  var BASE = (function () {
+    var m = document.querySelector('meta[name="hg-base"]');
+    return m ? m.getAttribute("content") : "";
+  })();
+
+  function url(path) {
+    return BASE + path;
+  }
 
   function caret() {
     return (
@@ -19,7 +28,7 @@
   function render() {
     return (
       '<div class="hg-nav__inner">' +
-        '<a href="/" class="hg-nav__logo" aria-label="Hillgate, home"><img src="/assets/logo.svg" alt="Hillgate" /></a>' +
+        '<a href="' + url("index.html") + '" class="hg-nav__logo" aria-label="Hillgate, home"><img src="' + url("assets/logo.svg") + '" alt="Hillgate" /></a>' +
 
         '<button class="hg-nav__toggle" aria-expanded="false" aria-controls="hg-nav-links" aria-label="Open menu"><span aria-hidden="true"></span></button>' +
 
@@ -27,31 +36,31 @@
           '<li class="hg-nav__item">' +
             '<button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-products">Products' + caret() + "</button>" +
             '<ul class="hg-nav__dropdown" id="hg-nav-products" data-open="false">' +
-              '<li><a href="/products/third-party-payments/">Third-Party Payments</a></li>' +
-              '<li><a href="/products/fx-trading/">FX Trading</a></li>' +
-              '<li><a href="/products/instant-settlement/">Instant Settlement Network</a></li>' +
+              '<li><a href="' + url("products/third-party-payments/index.html") + '">Third-Party Payments</a></li>' +
+              '<li><a href="' + url("products/fx-trading/index.html") + '">FX Trading</a></li>' +
+              '<li><a href="' + url("products/instant-settlement/index.html") + '">Instant Settlement Network</a></li>' +
             "</ul>" +
           "</li>" +
-          '<li class="hg-nav__item"><a class="hg-nav__link" href="/access/">How it works</a></li>' +
-          '<li class="hg-nav__item"><a class="hg-nav__link" href="/about/">About</a></li>' +
+          '<li class="hg-nav__item"><a class="hg-nav__link" href="' + url("access/index.html") + '">How it works</a></li>' +
+          '<li class="hg-nav__item"><a class="hg-nav__link" href="' + url("about/index.html") + '">About</a></li>' +
           '<li class="hg-nav__item">' +
             '<button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-legal">Legal' + caret() + "</button>" +
             '<ul class="hg-nav__dropdown" id="hg-nav-legal" data-open="false">' +
-              '<li><a href="/legal/licences/">Licences</a></li>' +
-              '<li><a href="/legal/fees/">Fees</a></li>' +
-              '<li><a href="/legal/risk-disclosure/">Risk disclosure</a></li>' +
-              '<li><a href="/legal/conflicts-of-interest/">Conflicts of interest</a></li>' +
-              '<li><a href="/legal/complaints/">Complaints</a></li>' +
-              '<li><a href="/legal/environmental-disclosures/">Environmental disclosures</a></li>' +
-              '<li><a href="/legal/marketing-communications-policy/">Marketing communications</a></li>' +
-              '<li><a href="/legal/disclosures/">Disclosures overview</a></li>' +
+              '<li><a href="' + url("legal/licences/index.html") + '">Licences</a></li>' +
+              '<li><a href="' + url("legal/fees/index.html") + '">Fees</a></li>' +
+              '<li><a href="' + url("legal/risk-disclosure/index.html") + '">Risk disclosure</a></li>' +
+              '<li><a href="' + url("legal/conflicts-of-interest/index.html") + '">Conflicts of interest</a></li>' +
+              '<li><a href="' + url("legal/complaints/index.html") + '">Complaints</a></li>' +
+              '<li><a href="' + url("legal/environmental-disclosures/index.html") + '">Environmental disclosures</a></li>' +
+              '<li><a href="' + url("legal/marketing-communications-policy/index.html") + '">Marketing communications</a></li>' +
+              '<li><a href="' + url("legal/disclosures/index.html") + '">Disclosures overview</a></li>' +
             "</ul>" +
           "</li>" +
         "</ul>" +
 
         '<div class="hg-nav__cta">' +
-          '<a class="hg-nav__login" href="/access/">Client log in</a>' +
-          '<a class="hg-button-primary" href="/contact/">Request institutional access</a>' +
+          '<a class="hg-nav__login" href="' + url("access/index.html") + '">Client log in</a>' +
+          '<a class="hg-button-primary" href="' + url("contact/index.html") + '">Request institutional access</a>' +
         "</div>" +
       "</div>"
     );
