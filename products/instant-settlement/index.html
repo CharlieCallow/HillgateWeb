@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instant Settlement Network, Hillgate Finance</title>
+  <meta name="description" content="A multilateral settlement network for EEA institutional counterparties. Fiat legs operate under the EMI authorisation. Crypto legs commence following MiCAR authorisation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div data-site-nav></div>
+
+  <main>
+    <section class="hg-page-header">
+      <div class="hg-container">
+        <span class="hg-page-header__eyebrow">Products · Instant Settlement Network</span>
+        <h1 class="hg-page-header__title">Instant Settlement Network.</h1>
+        <p class="hg-page-header__lede">
+          A multilateral institutional settlement network. Fiat-leg settlement is live under the
+          EMI authorisation. Crypto-asset settlement (custody, transfer, exchange against
+          counterparties on the network) commences following MiCAR authorisation.
+        </p>
+      </div>
+    </section>
+
+    <section class="hg-page-body">
+      <div class="hg-container">
+
+        <aside class="hg-regime-banner" aria-label="Regulatory regime for this product">
+          <span class="hg-regime-banner__label">Provided under</span>
+          <div class="hg-regime-banner__pills">
+            <span class="hg-pill hg-pill--active"><span class="hg-pill__dot"></span>Electronic Money Institution authorisation (fiat legs, DNB register WFTEG R200389)</span>
+            <span class="hg-pill hg-pill--pending"><span class="hg-pill__dot"></span>MiCAR (crypto legs, application under assessment by the AFM)</span>
+          </div>
+        </aside>
+
+        <div class="hg-callout hg-callout--warning">
+          <p>
+            Crypto-asset settlement is not currently offered. Until the AFM grants the MiCAR
+            authorisation, only fiat-leg settlement between institutional members is available.
+            See <a href="/legal/licences/">Licences</a>.
+          </p>
+        </div>
+
+        <div class="hg-stack hg-stack--lg">
+
+          <article class="hg-card">
+            <h2>What this service is</h2>
+            <p>
+              A network for the multilateral settlement of obligations between regulated
+              institutional members. A member submits a payment or settlement instruction to a
+              counterparty also onboarded to the network. The fiat leg is debited from the
+              instructing member's e-money balance and credited to the receiving member's e-money
+              balance.
+            </p>
+            <p>
+              The intended end state, available following MiCAR authorisation, is that crypto-leg
+              settlement uses Hillgate's crypto-asset custody and transfer services to move
+              crypto-assets between members in a single coordinated transaction.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Who it is for</h2>
+            <ul>
+              <li>Regulated EEA institutional counterparties already onboarded to Hillgate.</li>
+              <li>Members of bilateral settlement arrangements seeking a multilateral alternative.</li>
+              <li>Fintech partners settling institutional obligations within a documented programme.</li>
+            </ul>
+            <p class="hg-panel__small">
+              No retail counterparties. Membership requires institutional onboarding, signed
+              network rules and acceptance into the membership register.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>How clients access the service</h2>
+            <p>
+              The full channel matrix is on the <a href="/access/">How it works</a> page.
+            </p>
+            <ul>
+              <li><strong>Web application:</strong> review network rules, opt in or opt out of membership, view a counterparty's published settlement instructions, instruct settlement.</li>
+              <li><strong>API:</strong> instruct fiat-leg settlement to a previously trusted member, retrieve settlement history. Membership changes are web-app only.</li>
+            </ul>
+          </article>
+
+          <article class="hg-card">
+            <h2>Fees</h2>
+            <p>
+              Network membership and per-settlement fees are listed in the
+              <a href="/legal/fees/">fees</a> page. Crypto-leg fees will be added once the service
+              is authorised and operational.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Risks</h2>
+            <p>
+              Fiat-leg settlement carries operational, technology and transfer risk. Crypto-leg
+              settlement, once live, will additionally carry custody and market risk. The standing
+              <a href="/legal/risk-disclosure/">risk disclosure</a> describes the full set.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Regulatory basis</h2>
+            <p>
+              Fiat legs are provided by Hillgate Finance B.V. under an electronic money
+              institution authorisation issued by De Nederlandsche Bank under the <em>Wet op het
+              financieel toezicht</em>, register entry <strong>WFTEG R200389</strong>.
+            </p>
+            <p>
+              Crypto-asset services (custody and administration, exchange, transfer services) are
+              not yet provided. Hillgate has submitted an application for authorisation as a
+              crypto-asset service provider under Regulation (EU) 2023/1114 to the Autoriteit
+              Financiële Markten. Crypto-leg settlement will commence following authorisation.
+            </p>
+            <p>
+              See <a href="/legal/licences/">Licences</a> for full regulatory detail and supervisor
+              contact addresses.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div data-regulatory-footer></div>
+  <div data-site-footer></div>
+
+  <script src="/assets/site-nav.js"></script>
+  <script src="/assets/site-footer.js"></script>
+  <script src="/assets/regulatory-footer.js"></script>
+</body>
+</html>

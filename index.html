@@ -3,85 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hillgate Finance — Payments, crypto and conversion for institutions</title>
-  <meta name="description" content="Hillgate Finance B.V. provides regulated payment, crypto-asset and conversion services to institutional and professional clients in the Netherlands." />
+  <title>Hillgate Finance, regulated payments and settlement for EEA institutions</title>
+  <meta name="description" content="Hillgate Finance B.V. is an Amsterdam-based electronic money institution offering payments, FX trading and settlement services to regulated EEA institutional counterparties." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="hg-nav" role="banner">
-    <div class="hg-nav__inner">
-      <a href="index.html" class="hg-nav__logo" aria-label="Hillgate — home">
-        <img src="assets/logo.svg" alt="Hillgate" />
-      </a>
+  <div data-site-nav></div>
 
-      <button class="hg-nav__toggle" aria-expanded="false" aria-controls="hg-nav-links" aria-label="Open menu">
-        <span aria-hidden="true"></span>
-      </button>
-
-      <ul class="hg-nav__links" id="hg-nav-links" data-open="false">
-        <li class="hg-nav__item">
-          <button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-services">
-            Services
-            <svg class="hg-nav__caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <ul class="hg-nav__dropdown" id="hg-nav-services" data-open="false">
-            <li><a href="services-payments.html">Payments</a></li>
-            <li><a href="services-crypto.html">Crypto</a></li>
-            <li><a href="services-convert.html">Convert</a></li>
-          </ul>
-        </li>
-        <li class="hg-nav__item">
-          <a class="hg-nav__link" href="about.html">About</a>
-        </li>
-        <li class="hg-nav__item">
-          <button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-disclosures">
-            Disclosures
-            <svg class="hg-nav__caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 4l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <ul class="hg-nav__dropdown" id="hg-nav-disclosures" data-open="false">
-            <li><a href="disclosures-risks.html">Risks</a></li>
-            <li><a href="disclosures-conflicts.html">Conflicts of interest</a></li>
-            <li><a href="disclosures-esg.html">ESG</a></li>
-            <li><a href="disclosures-fees.html">Fees and pricing</a></li>
-            <li><a href="disclosures-regulatory.html">Regulatory information</a></li>
-            <li><a href="disclosures-complaints.html">Complaints</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <div class="hg-nav__cta">
-        <a class="hg-nav__login" href="/open-account">Log in</a>
-        <a class="hg-button-primary" href="/open-account">Open account</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
+  <main>
     <section class="hg-hero">
       <div class="hg-container">
         <span class="hg-hero__eyebrow">Hillgate Finance B.V.</span>
-        <h1 class="hg-hero__title">Regulated payments, crypto and conversion for institutions.</h1>
+        <h1 class="hg-hero__title">Regulated payments, FX and settlement for EEA institutional counterparties.</h1>
         <p class="hg-hero__lede">
-          We provide payment, electronic-money and crypto-asset services to institutional, treasury and
-          professional clients. One legal entity, two licences, a single account.
+          One legal entity, two authorisations, three institutional products. Onboarding is mediated.
+          There is no self-service registration.
         </p>
         <div class="hg-hero__ctas">
-          <a class="hg-button-primary" href="/open-account">Open account</a>
-          <a class="hg-button-ghost" href="contact.html">Talk to us</a>
+          <a class="hg-button-primary" href="/contact/">Request institutional access</a>
+          <a class="hg-button-ghost" href="/access/">How it works</a>
         </div>
       </div>
     </section>
 
-    <section class="hg-section" aria-labelledby="services-heading">
+    <section class="hg-trust" aria-label="Regulated status">
+      <div class="hg-container">
+        <div class="hg-trust__inner">
+          <div class="hg-trust__block">
+            <h3>EMI authorisation</h3>
+            <p><span class="hg-pill hg-pill--active"><span class="hg-pill__dot"></span>Active</span></p>
+            <p>
+              Authorised by De Nederlandsche Bank as an electronic money institution under the
+              <em>Wet op het financieel toezicht</em>, register entry WFTEG R200389.
+            </p>
+          </div>
+          <div class="hg-trust__block">
+            <h3>MiCAR CASP authorisation</h3>
+            <p><span class="hg-pill hg-pill--pending"><span class="hg-pill__dot"></span>Application under assessment by the AFM</span></p>
+            <p>
+              Application submitted to the Autoriteit Financiële Markten under Regulation (EU)
+              2023/1114. Crypto-asset services will commence following authorisation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hg-section" aria-labelledby="products-heading">
       <div class="hg-container">
         <div class="hg-section-head">
-          <span class="hg-section-head__eyebrow">Services</span>
-          <h2 class="hg-section-head__title" id="services-heading">Three services, one account.</h2>
+          <span class="hg-section-head__eyebrow">Products</span>
+          <h2 class="hg-section-head__title" id="products-heading">Three products under one institutional account.</h2>
           <p class="hg-section-head__lede">
-            Each service sits under a specific licence. We name the licence on every service page.
+            Each product page names the licence under which the service is provided.
           </p>
         </div>
 
@@ -90,191 +67,120 @@
             <div class="hg-service-card__icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg>
             </div>
-            <h3 class="hg-service-card__title">Payments</h3>
+            <h3 class="hg-service-card__title">Third-Party Payments</h3>
             <p class="hg-service-card__desc">
-              SEPA and SWIFT payments, named IBANs and e-money accounts for institutional and treasury
-              counterparties.
+              Outbound payments to third-party beneficiaries from a named institutional e-money
+              balance, via SEPA and SWIFT.
             </p>
-            <a class="hg-service-card__link" href="services-payments.html">Learn more →</a>
-          </div>
-
-          <div class="hg-card hg-service-card">
-            <div class="hg-service-card__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
-            </div>
-            <h3 class="hg-service-card__title">Crypto</h3>
-            <p class="hg-service-card__desc">
-              Custody, transfer and execution of crypto-assets for eligible clients under our MiCAR
-              authorisation.
-            </p>
-            <a class="hg-service-card__link" href="services-crypto.html">Learn more →</a>
+            <p><span class="hg-pill hg-pill--active"><span class="hg-pill__dot"></span>EMI</span></p>
+            <a class="hg-service-card__link" href="/products/third-party-payments/">Read more</a>
           </div>
 
           <div class="hg-card hg-service-card">
             <div class="hg-service-card__icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12l-3-3"/><path d="M20 16H8l3 3"/></svg>
             </div>
-            <h3 class="hg-service-card__title">Convert</h3>
+            <h3 class="hg-service-card__title">FX Trading</h3>
             <p class="hg-service-card__desc">
-              FX between fiat currencies and execution between fiat and crypto, settled inside your
-              Hillgate account.
+              Spot conversion between supported fiat currencies, settling between e-money balances
+              inside the institutional account.
             </p>
-            <a class="hg-service-card__link" href="services-convert.html">Learn more →</a>
+            <p><span class="hg-pill hg-pill--active"><span class="hg-pill__dot"></span>EMI</span></p>
+            <a class="hg-service-card__link" href="/products/fx-trading/">Read more</a>
+          </div>
+
+          <div class="hg-card hg-service-card">
+            <div class="hg-service-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+            </div>
+            <h3 class="hg-service-card__title">Instant Settlement Network</h3>
+            <p class="hg-service-card__desc">
+              A multilateral institutional settlement network. Fiat legs settle under the EMI
+              authorisation. Crypto legs commence following MiCAR authorisation.
+            </p>
+            <p>
+              <span class="hg-pill hg-pill--active"><span class="hg-pill__dot"></span>EMI (fiat legs)</span>
+              <span class="hg-pill hg-pill--pending"><span class="hg-pill__dot"></span>MiCAR (crypto legs, pending)</span>
+            </p>
+            <a class="hg-service-card__link" href="/products/instant-settlement/">Read more</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="hg-trust" aria-label="Regulatory licences">
-      <div class="hg-container">
-        <div class="hg-trust__inner">
-          <span class="hg-trust__label">Licenced and supervised</span>
-          <p class="hg-trust__text">
-            Hillgate Finance B.V. is authorised by De Nederlandsche Bank as an Electronic Money
-            Institution (registration number WFTEG R200389) and by the Autoriteit Financiële Markten
-            as a Crypto-Asset Service Provider <!-- TODO: confirm post-authorisation phrasing -->
-            (registration number <em>[TODO: AFM number]</em>) under Regulation (EU) 2023/1114.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="hg-section" aria-labelledby="who-heading">
+    <section class="hg-section" aria-labelledby="who-heading" style="background-color: var(--hg-surface); border-top: 1px solid var(--hg-border);">
       <div class="hg-container">
         <div class="hg-section-head">
-          <span class="hg-section-head__eyebrow">Who we serve</span>
-          <h2 class="hg-section-head__title" id="who-heading">Built for institutional and professional clients.</h2>
+          <span class="hg-section-head__eyebrow">Who can transact</span>
+          <h2 class="hg-section-head__title" id="who-heading">Regulated EEA institutional counterparties only.</h2>
           <p class="hg-section-head__lede">
-            We do not onboard retail clients. Eligibility, suitability and source-of-funds checks
-            apply to every account.
+            Onboarding is mediated. There is no self-service registration, and no functionality is
+            accessible to a user before onboarding is complete.
           </p>
         </div>
 
         <ul class="hg-bullets">
-          <li>Institutional asset managers, hedge funds and family offices requiring named IBANs and crypto custody under one roof.</li>
-          <li>Corporate treasury teams hedging multi-currency exposure and settling supplier payments across SEPA and SWIFT.</li>
-          <li>Fintech partners embedding regulated payment and crypto-asset rails into their own platforms under a documented programme.</li>
-          <li>Professional clients within the meaning of MiFID II Annex II, where the service is offered in line with our licence scope.</li>
+          <li>Authorised investment firms, credit institutions and other supervised financial entities in the EEA.</li>
+          <li>Asset managers, family offices and corporate treasury functions transacting in their own name.</li>
+          <li>Fintech partners embedding regulated payment rails under a documented programme agreement.</li>
+          <li>No retail clients. The fee schedule, risk disclosure and licences page are publicly readable so a prospective counterparty can review them before any commitment.</li>
         </ul>
+
+        <div style="margin-top: var(--hg-s-6);">
+          <a class="hg-button-primary" href="/contact/">Request institutional access</a>
+          <a class="hg-button-ghost" href="/legal/licences/" style="margin-left: var(--hg-s-3);">Read the licences page</a>
+        </div>
       </div>
     </section>
 
-    <section class="hg-section" aria-labelledby="disclosures-heading" style="background-color: var(--hg-surface); border-top: 1px solid var(--hg-border);">
+    <section class="hg-section" aria-labelledby="disclosures-heading">
       <div class="hg-container">
         <div class="hg-section-head">
-          <span class="hg-section-head__eyebrow">Disclosures</span>
-          <h2 class="hg-section-head__title" id="disclosures-heading">Everything we are required to publish.</h2>
-          <p class="hg-section-head__lede">
-            One click from every page. All six categories live in our Disclosures hub.
-          </p>
+          <span class="hg-section-head__eyebrow">Legal and disclosures</span>
+          <h2 class="hg-section-head__title" id="disclosures-heading">Everything we are required to publish, one click from every page.</h2>
         </div>
 
-        <div class="hg-disclosures-preview">
-          <ul class="hg-disclosures-preview__list">
-            <li class="hg-disclosures-preview__item">
-              <a href="disclosures-risks.html">
-                <p class="hg-disclosures-preview__title">Risks</p>
-                <p class="hg-disclosures-preview__desc">Market, custody, operational, technology, regulatory, tax and transfer risk.</p>
-              </a>
-            </li>
-            <li class="hg-disclosures-preview__item">
-              <a href="disclosures-conflicts.html">
-                <p class="hg-disclosures-preview__title">Conflicts of interest</p>
-                <p class="hg-disclosures-preview__desc">How we identify, prevent, mitigate and disclose conflicts.</p>
-              </a>
-            </li>
-            <li class="hg-disclosures-preview__item">
-              <a href="disclosures-esg.html">
-                <p class="hg-disclosures-preview__title">ESG</p>
-                <p class="hg-disclosures-preview__desc">Principal adverse impacts of crypto-assets under MiCAR Articles 66(5) and 67(7).</p>
-              </a>
-            </li>
-            <li class="hg-disclosures-preview__item">
-              <a href="disclosures-fees.html">
-                <p class="hg-disclosures-preview__title">Fees and pricing</p>
-                <p class="hg-disclosures-preview__desc">Payment fees, conversion spreads, custody and transfer fees.</p>
-              </a>
-            </li>
-            <li class="hg-disclosures-preview__item">
-              <a href="disclosures-regulatory.html">
-                <p class="hg-disclosures-preview__title">Regulatory information</p>
-                <p class="hg-disclosures-preview__desc">Legal entity, supervisors, authorisations and supervisor contacts.</p>
-              </a>
-            </li>
-            <li class="hg-disclosures-preview__item">
-              <a href="disclosures-complaints.html">
-                <p class="hg-disclosures-preview__title">Complaints</p>
-                <p class="hg-disclosures-preview__desc">How to submit a complaint, response timelines and the external dispute body.</p>
-              </a>
-            </li>
-          </ul>
+        <div class="hg-grid-3">
+          <a class="hg-disclosure-tile" href="/legal/licences/">
+            <h3 class="hg-disclosure-tile__title">Licences</h3>
+            <p class="hg-disclosure-tile__desc">Legal entity, EMI authorisation and MiCAR application status, supervisor contact details.</p>
+            <span class="hg-disclosure-tile__arrow">Read</span>
+          </a>
+          <a class="hg-disclosure-tile" href="/legal/fees/">
+            <h3 class="hg-disclosure-tile__title">Fees</h3>
+            <p class="hg-disclosure-tile__desc">Pricing schedule for payments, FX trading and settlement, in line with MiCAR Article 66(4).</p>
+            <span class="hg-disclosure-tile__arrow">Read</span>
+          </a>
+          <a class="hg-disclosure-tile" href="/legal/risk-disclosure/">
+            <h3 class="hg-disclosure-tile__title">Risk disclosure</h3>
+            <p class="hg-disclosure-tile__desc">Market, custody, operational, technology, regulatory, tax and transfer risks.</p>
+            <span class="hg-disclosure-tile__arrow">Read</span>
+          </a>
+          <a class="hg-disclosure-tile" href="/legal/conflicts-of-interest/">
+            <h3 class="hg-disclosure-tile__title">Conflicts of interest</h3>
+            <p class="hg-disclosure-tile__desc">Identification, prevention, mitigation and disclosure framework.</p>
+            <span class="hg-disclosure-tile__arrow">Read</span>
+          </a>
+          <a class="hg-disclosure-tile" href="/legal/complaints/">
+            <h3 class="hg-disclosure-tile__title">Complaints</h3>
+            <p class="hg-disclosure-tile__desc">How to submit, response timelines, supervisor escalation path.</p>
+            <span class="hg-disclosure-tile__arrow">Read</span>
+          </a>
+          <a class="hg-disclosure-tile" href="/legal/environmental-disclosures/">
+            <h3 class="hg-disclosure-tile__title">Environmental disclosures</h3>
+            <p class="hg-disclosure-tile__desc">MiCAR Article 66(5) firm-level statement and per-asset template.</p>
+            <span class="hg-disclosure-tile__arrow">Read</span>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="hg-footer" role="contentinfo">
-    <div class="hg-container">
-      <div class="hg-footer__grid">
-        <div class="hg-footer__brand">
-          <img src="assets/logo-white.svg" alt="Hillgate" />
-          <p class="hg-footer__tagline">
-            Hillgate Finance B.V. — regulated payments, crypto-asset services and conversion
-            for institutional and professional clients.
-          </p>
-        </div>
-        <div class="hg-footer__col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services-payments.html">Payments</a></li>
-            <li><a href="services-crypto.html">Crypto</a></li>
-            <li><a href="services-convert.html">Convert</a></li>
-          </ul>
-        </div>
-        <div class="hg-footer__col">
-          <h4>Disclosures</h4>
-          <ul>
-            <li><a href="disclosures-risks.html">Risks</a></li>
-            <li><a href="disclosures-conflicts.html">Conflicts of interest</a></li>
-            <li><a href="disclosures-esg.html">ESG</a></li>
-            <li><a href="disclosures-fees.html">Fees and pricing</a></li>
-            <li><a href="disclosures-regulatory.html">Regulatory information</a></li>
-            <li><a href="disclosures-complaints.html">Complaints</a></li>
-          </ul>
-        </div>
-        <div class="hg-footer__col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="legal.html">Legal</a></li>
-          </ul>
-        </div>
-      </div>
+  <div data-regulatory-footer></div>
+  <div data-site-footer></div>
 
-      <div class="hg-footer__legal">
-        <p class="hg-footer__disclosure">
-          Payment and electronic money services are provided by Hillgate Finance B.V., authorised
-          by De Nederlandsche Bank as an Electronic Money Institution, registration number WFTEG R200389.
-        </p>
-        <p class="hg-footer__disclosure">
-          Crypto-asset services are provided by Hillgate Finance B.V., authorised <!-- TODO: confirm post-authorisation phrasing -->
-          by the Autoriteit Financiële Markten as a Crypto-Asset Service Provider under
-          Regulation (EU) 2023/1114, registration number [TODO: AFM number].
-        </p>
-      </div>
-
-      <div class="hg-footer__bottom">
-        <span>© 2026 Hillgate Finance B.V. All rights reserved.</span>
-        <ul class="hg-footer__bottom-links">
-          <li><a href="legal.html#terms">Terms</a></li>
-          <li><a href="legal.html#privacy">Privacy</a></li>
-          <li><a href="legal.html#cookies">Cookies</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="/assets/site-nav.js"></script>
+  <script src="/assets/site-footer.js"></script>
+  <script src="/assets/regulatory-footer.js"></script>
 </body>
 </html>

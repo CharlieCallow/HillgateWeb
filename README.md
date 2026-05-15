@@ -1,59 +1,91 @@
-# Hillgate public website — mockup
+# Hillgate public website (www.hillgate.com)
 
-Static HTML/CSS mockup of the Hillgate Finance B.V. public marketing site. This is the informational
-site that sits in front of the authenticated platform; it is not a production site.
+Static HTML/CSS mockup of the Hillgate Finance B.V. public marketing site. Built to respond to
+AFM MiCAR RFI questions 16, 27 and 28. Not a production site.
 
-- Plain HTML5 and CSS3, no frameworks
-- One shared `styles.css` with CSS custom properties for the design tokens
-- One HTML file per route, flat directory
-- Minimal `script.js` for nav dropdowns and the mobile menu only
-- Mobile-responsive with a single breakpoint at 768px
+- Plain HTML5 and CSS3, no framework.
+- One shared `styles.css` with CSS custom properties for the design tokens.
+- Directory-per-route layout: every route resolves to an `index.html` so URLs match the structure
+  used in the AFM submission (`/products/third-party-payments/`, `/legal/licences/`, etc.).
+- Three small JS injectors carry the shared chrome: top navigation, primary footer, and the
+  regulatory footer strip. Each is a single source of truth.
+- Mobile responsive at a single 768px breakpoint.
 
 ## Run locally
 
-Just open `index.html` in any modern browser:
-
-```bash
-open index.html        # macOS
-xdg-open index.html    # Linux
-start index.html       # Windows
-```
-
-If you prefer a local web server (recommended so that `<script src="script.js">` and relative paths
-resolve identically to a hosted environment), any one of the following works:
+Because routes use directory-`index.html` resolution, the site needs a local web server. From the
+repository root:
 
 ```bash
 # Python 3
 python3 -m http.server 8000
 
-# Node, with npx
+# Or Node
 npx serve .
 ```
 
-Then visit `http://localhost:8000`.
+Then open `http://localhost:8000`.
 
-## Files
+## Routes
 
-| File | Purpose |
-| --- | --- |
-| `index.html` | Homepage |
-| `services-payments.html` | Payments and e-money services (EMI) |
-| `services-crypto.html` | Crypto-asset services (CASP) |
-| `services-convert.html` | Conversion: FX and crypto execution |
-| `about.html` | About Hillgate, leadership |
-| `disclosures.html` | Disclosures hub |
-| `disclosures-risks.html` | Risk disclosure |
-| `disclosures-conflicts.html` | Conflicts of interest disclosure |
-| `disclosures-esg.html` | ESG (MiCAR Articles 66(5) and 67(7)) |
-| `disclosures-fees.html` | Fees and pricing schedule |
-| `disclosures-regulatory.html` | Regulatory information, supervisors, ADR |
-| `disclosures-complaints.html` | Complaints handling |
-| `contact.html` | Contact details |
-| `legal.html` | Terms, Privacy, Cookies |
-| `styles.css` | All styles, design tokens, components |
-| `script.js` | Nav dropdowns and mobile menu only |
-| `assets/logo.svg` | Navy wordmark used in the nav |
-| `assets/logo-white.svg` | White wordmark used in the footer |
+| Route | File |
+|---|---|
+| `/` | `index.html` |
+| `/products/third-party-payments` | `products/third-party-payments/index.html` |
+| `/products/fx-trading` | `products/fx-trading/index.html` |
+| `/products/instant-settlement` | `products/instant-settlement/index.html` |
+| `/access` | `access/index.html` |
+| `/about` | `about/index.html` |
+| `/contact` | `contact/index.html` |
+| `/legal/licences` | `legal/licences/index.html` |
+| `/legal/disclosures` | `legal/disclosures/index.html` |
+| `/legal/fees` | `legal/fees/index.html` |
+| `/legal/risk-disclosure` | `legal/risk-disclosure/index.html` |
+| `/legal/conflicts-of-interest` | `legal/conflicts-of-interest/index.html` |
+| `/legal/complaints` | `legal/complaints/index.html` |
+| `/legal/environmental-disclosures` | `legal/environmental-disclosures/index.html` |
+| `/legal/marketing-communications-policy` | `legal/marketing-communications-policy/index.html` |
+| `/legal/terms` | `legal/terms/index.html` |
+| `/legal/privacy` | `legal/privacy/index.html` |
+| `/legal/cookies` | `legal/cookies/index.html` |
+
+## Shared chrome: single source of truth
+
+Three JS modules in `assets/`:
+
+- `assets/site-nav.js`: injects the sticky top navigation and wires the dropdown plus mobile-menu
+  handlers. Every page contains `<div data-site-nav></div>` near the top of `<body>`.
+- `assets/site-footer.js`: injects the primary navy footer with the standing top-level link set
+  required by AFM RFI Q28 (Licences, Fees, Risk disclosure, Conflicts of interest, Complaints,
+  Environmental disclosures, Terms of service, Privacy notice, Cookie settings). Every page
+  contains `<div data-site-footer></div>`.
+- `assets/regulatory-footer.js`: injects the persistent regulatory strip. Wording lives in this
+  file and only in this file. Every page contains `<div data-regulatory-footer></div>`,
+  positioned immediately above the primary footer in the markup.
+
+Editing the regulatory wording: open `assets/regulatory-footer.js`, edit the `BODY` and
+`SUPERVISORS` constants, save. The change propagates to every page on the next request.
+
+The page template, used by every HTML file under this tree:
+
+```html
+<!doctype html>
+<html lang="en">
+<head> ... </head>
+<body>
+  <div data-site-nav></div>
+
+  <main> ... </main>
+
+  <div data-regulatory-footer></div>
+  <div data-site-footer></div>
+
+  <script src="/assets/site-nav.js"></script>
+  <script src="/assets/site-footer.js"></script>
+  <script src="/assets/regulatory-footer.js"></script>
+</body>
+</html>
+```
 
 ## Design tokens
 
@@ -64,79 +96,78 @@ CSS custom properties on `:root` in `styles.css`:
 - Status: `--hg-success`, `--hg-warning`, `--hg-info`, `--hg-danger`
 - Radii: `--hg-radius-sm` (6), `--hg-radius-md` (10), `--hg-radius-lg` (16)
 - Spacing: `--hg-s-1` through `--hg-s-9`
-- Type: `--hg-font` (Inter, with system fallbacks)
+- Type: `--hg-font` (Inter with system fallbacks)
 
 ## Reusable component classes
 
 - `.hg-button-primary`, `.hg-button-ghost`
 - `.hg-card`, `.hg-panel`
+- `.hg-pill`, `.hg-pill--active`, `.hg-pill--pending`, `.hg-pill--inactive` (regulatory status)
 - `.hg-tag-success`, `.hg-tag-warning`, `.hg-tag-info`, `.hg-tag-danger`
-- `.hg-nav`, `.hg-footer`
-- `.hg-prose`
+- `.hg-regime-banner` (standing regime banner at the top of every product page)
+- `.hg-regulatory-strip` (single-source-of-truth regulatory footer)
+- `.hg-matrix` (channel matrix used on `/access`)
+- `.hg-choice` (side-by-side comparison cards used on `/access`)
+- `.hg-callout`, `.hg-callout--warning`
+- `.hg-deflist` (definition list used on legal pages)
+- `.hg-standing-summary` (top-of-page summary block on legal and access pages)
+- `.hg-prose` (long-form text wrapper, 65ch max-width)
 
-## TODOs still requiring real content
+## Editorial rules in force
 
-Search the source for the literal string `TODO` (or `[TODO`) to find them in context.
+- No em dashes anywhere. Replaced with commas, colons, periods, parentheses or sentence breaks.
+- No AI-toned filler ("seamless", "robust", "leverage", "empower", "unlock", etc).
+- Hillgate is not re-introduced in every section. Once the page header has set the context, body
+  copy uses unattributed sentences or "the firm".
+- Plain declarative sentences. Institutional B2B tone.
+- British English (authorisation, organisation, programme).
+- No retail framing. The CTA is "Request institutional access" and onboarding is mediated.
 
-### Regulatory placeholders
+## Regulatory framing
 
-- `[TODO: AFM number]` — AFM CASP registration number, appears in:
-  - `index.html` trust strip and footer
-  - footer of every other page
-  - `services-crypto.html` (regulatory basis panel)
-  - `services-convert.html` (crypto leg)
-  - `disclosures-regulatory.html`
-  - `disclosures-fees.html`
-- `[TODO: KvK number]`, `[TODO: LEI]`, `[TODO: address]` — legal entity details, in
-  `disclosures-regulatory.html` and `contact.html`
-- `[TODO: date]` — last-reviewed dates on the disclosures pages
+- The EMI authorisation is named with the exact wording: "Payment services are provided by Hillgate
+  Finance B.V. under an electronic money institution authorisation issued by De Nederlandsche Bank
+  under the Wet op het financieel toezicht, register entry WFTEG R200389."
+- The MiCAR position is named with the exact wording: "Crypto-asset services (custody and
+  administration, exchange, transfer services) are not yet provided. Hillgate has submitted an
+  application for authorisation as a crypto-asset service provider under Regulation (EU)
+  2023/1114 (MiCAR) to the Autoriteit Financiële Markten (AFM). Services will commence following
+  authorisation."
+- Until the MiCAR authorisation is granted, the regulatory footer uses the phrase "under
+  assessment by the Autoriteit Financiële Markten" and nothing stronger.
+- The Stichting Hillgate Finance / Deutsche Bank safeguarding arrangement is named on the
+  Licences page.
 
-### HTML comments to revisit post-authorisation
+## Documents
 
-Every claim that Hillgate is currently authorised under MiCAR is annotated with
-`<!-- TODO: confirm post-authorisation phrasing -->`. Grep for that comment:
+- `docs/afm-rfi-site-audit.md`: audit of the public site against the Q16 / Q27 / Q28 requirements.
+- `docs/afm-rfi-appendix.md`: skeleton of the private appendix that accompanies the AFM response,
+  covering web-app and API flows with screenshot insertion points.
+
+## TODOs
+
+Real content gaps to close before launch. Grep the source for `TODO`:
 
 ```bash
-grep -rn "confirm post-authorisation phrasing" .
+grep -rn "TODO" --include="*.html" --include="*.md" .
 ```
 
-Replace cautious "subject to authorisation" / "once authorised" wording with the
-confirmed-authorisation phrasing once the AFM CASP licence is granted.
+Categories:
 
-### Complaints page — pending Q70
-
-The complaints page (`disclosures-complaints.html`) is marked `TODO: pending Q70 wording` in
-several places. The final text on submission channels, response timelines and the ADR body is
-gated on the RFI Q70 response.
-
-### Fees schedule
-
-All numeric fees in `disclosures-fees.html` are `[TODO]` placeholders. Real numbers come from
-the commercial team and the account-agreement template.
-
-### Leadership
-
-Placeholder names, initials and bios in `about.html`. Replace with real names, roles and one-line
-bios for the Management Board and Supervisory Board.
+- Legal entity placeholders on the Licences page (`[TODO: KvK number]`, registered address, LEI).
+- Numeric fees on the Fees page (`[TODO]` and `€[TODO]`).
+- Leadership placeholder names on `/about/`.
+- "Last updated" dates on the legal pages.
+- Cookie inventory on `/legal/cookies/`.
+- Complaints page response timeline values, gated on the response to RFI Q70.
 
 ## What is intentionally out of scope
 
-- No cookie banner (the privacy approach will land separately).
-- No live chat widget.
-- No sign-up form. CTAs link to a placeholder `/open-account` route — it will 404 in this mockup,
-  which is expected.
-- No copy of the authenticated platform.
-- No multilingual support.
-- No JavaScript beyond the small nav-dropdown / mobile-menu script.
-
-## What good looks like (and why the structure is the way it is)
-
-- Disclosures are reachable in one click from every page via the nav, and the bottom strip of the
-  footer names the two licences directly so the regulatory framing is visible without scrolling on
-  the disclosures sub-pages.
-- Every service page names the licence under which it is offered, in its own panel, not buried in
-  body text.
-- No language anywhere implies Hillgate is currently authorised under MiCAR or that crypto services
-  are live in a misleading way. The cautious wording is annotated for easy update post-authorisation.
-- No returns claims, no comparative pricing claims, no "limited time" or "join thousands of users"
-  marketing language.
+- Cookie banner. None is shown because no non-essential cookies are set. A banner is added at the
+  point any non-essential cookie is introduced.
+- Live chat widget.
+- Self-service registration. The CTA is "Request institutional access" and routes to the contact
+  form.
+- The authenticated application. This repository is the public site only.
+- Multilingual support.
+- JavaScript beyond the three shared-chrome injectors.

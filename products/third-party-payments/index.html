@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Third-Party Payments, Hillgate Finance</title>
+  <meta name="description" content="Outbound payments to third-party beneficiaries from an institutional e-money balance, via SEPA and SWIFT. Provided under Hillgate's DNB electronic money institution authorisation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div data-site-nav></div>
+
+  <main>
+    <section class="hg-page-header">
+      <div class="hg-container">
+        <span class="hg-page-header__eyebrow">Products · Third-Party Payments</span>
+        <h1 class="hg-page-header__title">Third-Party Payments.</h1>
+        <p class="hg-page-header__lede">
+          Outbound SEPA and SWIFT payments to third-party beneficiaries from an institutional
+          e-money balance. The service is offered exclusively to regulated EEA institutional
+          counterparties.
+        </p>
+      </div>
+    </section>
+
+    <section class="hg-page-body">
+      <div class="hg-container">
+
+        <aside class="hg-regime-banner" aria-label="Regulatory regime for this product">
+          <span class="hg-regime-banner__label">Provided under</span>
+          <div class="hg-regime-banner__pills">
+            <span class="hg-pill hg-pill--active"><span class="hg-pill__dot"></span>Electronic Money Institution authorisation (DNB, register WFTEG R200389)</span>
+            <span class="hg-pill hg-pill--inactive">MiCAR: not engaged for this service</span>
+          </div>
+        </aside>
+
+        <div class="hg-stack hg-stack--lg">
+
+          <article class="hg-card">
+            <h2>What this service is</h2>
+            <p>
+              Payment services provided under the EMI authorisation: outbound credit transfers
+              instructed by the account holder to beneficiaries outside the account holder's own
+              accounts. Funds are debited from the e-money balance held in the institutional
+              account and credited to the beneficiary via the relevant payment scheme.
+            </p>
+            <p>
+              Supported channels: SEPA Credit Transfer, SEPA Instant Credit Transfer, and SWIFT.
+              Currencies follow the supported set published in the account agreement.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Who it is for</h2>
+            <ul>
+              <li>Authorised investment firms, credit institutions and other supervised EEA financial counterparties.</li>
+              <li>Asset managers, family offices and corporate treasury functions transacting in their own name.</li>
+              <li>Fintech partners embedding outbound payment rails under a documented programme agreement.</li>
+            </ul>
+            <p class="hg-panel__small">
+              No retail clients. Counterparty due diligence, sanctions screening and ongoing
+              transaction monitoring apply.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>How clients access the service</h2>
+            <p>
+              Account holders use either the web application or the Hillgate payment API. The full
+              channel matrix and the choice environment statement, including which actions are
+              web-app only, are on the <a href="/access/">How it works</a> page.
+            </p>
+            <ul>
+              <li><strong>Web application:</strong> beneficiary trusting, single and bulk payments, statements, user and permission management.</li>
+              <li><strong>API:</strong> instruction of payments to previously trusted beneficiaries, transaction retrieval and reconciliation endpoints. New beneficiaries are trusted in the web application.</li>
+            </ul>
+          </article>
+
+          <article class="hg-card">
+            <h2>Safeguarding</h2>
+            <p>
+              Client funds received in connection with payment services are safeguarded under
+              Article 7 of EMD2 as implemented in the <em>Wet op het financieel toezicht</em>.
+              Safeguarding is operated through Stichting Hillgate Finance with a safeguarding
+              account at Deutsche Bank.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Fees</h2>
+            <p>
+              Account, transaction and intermediary pass-through fees are published in the
+              <a href="/legal/fees/">fees schedule</a>. Counterparties may review the schedule
+              before any commitment to onboard.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Risks</h2>
+            <p>
+              Payment services carry operational, technology, transfer and regulatory risk. The
+              standing <a href="/legal/risk-disclosure/">risk disclosure</a> describes the full
+              set and how each is managed.
+            </p>
+          </article>
+
+          <article class="hg-card">
+            <h2>Regulatory basis</h2>
+            <p>
+              Payment services are provided by Hillgate Finance B.V. under an electronic money
+              institution authorisation issued by De Nederlandsche Bank under the <em>Wet op het
+              financieel toezicht</em>, register entry <strong>WFTEG R200389</strong>.
+            </p>
+            <p>
+              No MiCAR-regulated activity is engaged for this product. See
+              <a href="/legal/licences/">Licences</a> for full regulatory detail and supervisor
+              contact addresses.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div data-regulatory-footer></div>
+  <div data-site-footer></div>
+
+  <script src="/assets/site-nav.js"></script>
+  <script src="/assets/site-footer.js"></script>
+  <script src="/assets/regulatory-footer.js"></script>
+</body>
+</html>

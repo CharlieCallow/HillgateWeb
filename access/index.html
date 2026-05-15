@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How it works: web application and API access, Hillgate Finance</title>
+  <meta name="description" content="The two access channels for Hillgate Finance's institutional services: the web application and the Hillgate payment API. What each supports and excludes, and what onboarding requires." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div data-site-nav></div>
+
+  <main>
+    <section class="hg-page-header">
+      <div class="hg-container">
+        <span class="hg-page-header__eyebrow">How it works</span>
+        <h1 class="hg-page-header__title">Web application and API access.</h1>
+        <p class="hg-page-header__lede">
+          Two access channels are available to onboarded institutional counterparties. The web
+          application is the primary channel. The Hillgate payment API has a deliberately limited
+          surface and excludes actions that require manual review.
+        </p>
+      </div>
+    </section>
+
+    <section class="hg-page-body">
+      <div class="hg-container">
+
+        <div class="hg-standing-summary">
+          <p>
+            <strong>Access is granted only after onboarding is complete.</strong> No account
+            functionality, including the web application and API keys, is accessible to a user
+            before onboarding completion. Onboarding is mediated. There is no self-service
+            registration.
+          </p>
+          <p>
+            To begin the onboarding process, use the
+            <a href="/contact/">Request institutional access</a> form.
+          </p>
+        </div>
+
+        <div class="hg-stack hg-stack--lg">
+
+          <section aria-labelledby="channels-heading">
+            <h2 id="channels-heading">The two access channels</h2>
+            <div class="hg-choice">
+
+              <div class="hg-choice__card">
+                <h3>Web application</h3>
+                <p>The primary channel. Authenticated browser session with role-based access for the institution's users.</p>
+                <h4>Includes</h4>
+                <ul>
+                  <li>Beneficiary management, including trusting and untrusting beneficiaries.</li>
+                  <li>Payment initiation (Third-Party Payments).</li>
+                  <li>FX quote, confirm and execute.</li>
+                  <li>Settlement instruction within the Instant Settlement Network.</li>
+                  <li>Crypto-asset custody operations (available following MiCAR authorisation).</li>
+                  <li>Transaction history, statements, audit log export.</li>
+                  <li>API key management, user and permission management, 2FA settings.</li>
+                  <li>Network membership, opt-in and opt-out.</li>
+                </ul>
+                <h4>Excludes</h4>
+                <ul class="hg-choice__card--excludes">
+                  <li>Programmatic batch operations beyond the surface area exposed to API.</li>
+                </ul>
+              </div>
+
+              <div class="hg-choice__card">
+                <h3>Hillgate payment API</h3>
+                <p>An authenticated programmatic interface. The surface is intentionally narrow and excludes actions that require manual review.</p>
+                <h4>Includes</h4>
+                <ul>
+                  <li>Trading initiation (FX Trading: request quote, accept quote, execute).</li>
+                  <li>Transfer instructions to previously trusted beneficiaries (fiat payments only).</li>
+                  <li>Transaction information retrieval, statements and reconciliation endpoints.</li>
+                </ul>
+                <h4>Excludes</h4>
+                <ul class="hg-choice__card--excludes">
+                  <li>Trusting or untrusting a beneficiary. The beneficiary trusting workflow is web-app only.</li>
+                  <li>Custody-related actions. Crypto-asset custody operations are web-app only and become available following MiCAR authorisation.</li>
+                  <li>Account opening or change to account configuration.</li>
+                  <li>Full product information, fees and risk disclosures. Those are read on this site, not retrieved through the API.</li>
+                  <li>API onboarding. API keys are issued only after web-app onboarding is complete and a key is requested in the web application.</li>
+                </ul>
+              </div>
+
+            </div>
+          </section>
+
+          <section aria-labelledby="matrix-heading">
+            <h2 id="matrix-heading">Per-product channel matrix</h2>
+            <p>The matrix below summarises which channel supports each action for each product.</p>
+            <table class="hg-matrix">
+              <thead>
+                <tr>
+                  <th scope="col">Action</th>
+                  <th scope="col">Web application</th>
+                  <th scope="col">API</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Third-Party Payments</th>
+                </tr>
+                <tr>
+                  <td>Trust a new beneficiary</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-unsupported">Not supported</td>
+                </tr>
+                <tr>
+                  <td>Initiate payment to a trusted beneficiary</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-supported">Supported</td>
+                </tr>
+                <tr>
+                  <td>Retrieve payment history</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-supported">Supported</td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">FX Trading</th>
+                </tr>
+                <tr>
+                  <td>Request and accept quote</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-supported">Supported</td>
+                </tr>
+                <tr>
+                  <td>Execute FX trade</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-supported">Supported</td>
+                </tr>
+                <tr>
+                  <td>Retrieve execution reports</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-supported">Supported</td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Instant Settlement Network</th>
+                </tr>
+                <tr>
+                  <td>Network membership opt-in / opt-out</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-unsupported">Not supported</td>
+                </tr>
+                <tr>
+                  <td>Instruct fiat-leg settlement (trusted member)</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-supported">Supported</td>
+                </tr>
+                <tr>
+                  <td>Retrieve settlement history</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-supported">Supported</td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Crypto-asset services (available following MiCAR authorisation)</th>
+                </tr>
+                <tr>
+                  <td>Custody operations (deposit, hold, withdraw)</td>
+                  <td class="is-supported">Will be web-app only</td>
+                  <td class="is-unsupported">Not supported</td>
+                </tr>
+                <tr>
+                  <td>Crypto-asset transfer</td>
+                  <td class="is-supported">Web-app only</td>
+                  <td class="is-unsupported">Not supported</td>
+                </tr>
+                <tr>
+                  <td>Crypto-asset exchange (against fiat or another crypto-asset)</td>
+                  <td class="is-supported">Web-app only at launch; API support will be considered subsequently</td>
+                  <td class="is-unsupported">Not supported</td>
+                </tr>
+                <tr>
+                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Account configuration</th>
+                </tr>
+                <tr>
+                  <td>API key creation, rotation, revocation</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-unsupported">Not supported</td>
+                </tr>
+                <tr>
+                  <td>User and permission management</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-unsupported">Not supported</td>
+                </tr>
+                <tr>
+                  <td>2FA settings</td>
+                  <td class="is-supported">Supported</td>
+                  <td class="is-unsupported">Not supported</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section aria-labelledby="choice-heading">
+            <h2 id="choice-heading">Choice environment</h2>
+            <p>
+              The counterparty chooses, at the point of onboarding, whether to use only the web
+              application or to also enable API access. The choice can be revised at any time
+              after onboarding.
+            </p>
+            <ul>
+              <li>
+                <strong>Web application only:</strong> covers every action across every product,
+                including those that the API does not support. This is the default and is
+                sufficient for most institutional counterparties.
+              </li>
+              <li>
+                <strong>Web application plus API:</strong> adds programmatic access to the actions
+                listed in the matrix above. The web application is still required for beneficiary
+                trusting, custody operations and account configuration.
+              </li>
+            </ul>
+            <p>
+              The <a href="/legal/fees/">fees schedule</a> and the
+              <a href="/legal/risk-disclosure/">risk disclosure</a> are publicly available so they
+              can be read before any commitment to onboard. The
+              <a href="/legal/licences/">licences page</a> describes the legal regime under which
+              each product is provided.
+            </p>
+          </section>
+
+          <section aria-labelledby="onboarding-heading">
+            <h2 id="onboarding-heading">Onboarding gating</h2>
+            <p>
+              Access to the web application and to any API key is gated on onboarding completion.
+              The onboarding process includes know-your-customer review, ultimate-beneficial-owner
+              disclosures, source-of-funds evidence, sanctions screening, suitability assessment
+              for each product the counterparty intends to use, and execution of the account
+              agreement.
+            </p>
+            <p>
+              No login credentials are issued before onboarding is complete. The API has no
+              public, pre-onboarding endpoints. The public site offers product information, fees,
+              disclosures, and an enquiry form for prospective counterparties.
+            </p>
+            <p style="margin-top: var(--hg-s-5);">
+              <a class="hg-button-primary" href="/contact/">Request institutional access</a>
+            </p>
+          </section>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div data-regulatory-footer></div>
+  <div data-site-footer></div>
+
+  <script src="/assets/site-nav.js"></script>
+  <script src="/assets/site-footer.js"></script>
+  <script src="/assets/regulatory-footer.js"></script>
+</body>
+</html>
