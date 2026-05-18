@@ -29,10 +29,6 @@
   function render() {
     return (
       '<div class="hg-container">' +
-        '<div class="hg-footer__licence">' +
-          '<p>' + LICENCE_STATEMENT + '</p>' +
-        '</div>' +
-
         '<div class="hg-footer__grid">' +
           '<div class="hg-footer__brand">' +
             '<img src="' + url("assets/logo-white.svg") + '" alt="Hillgate" />' +
@@ -41,6 +37,7 @@
               'Hillgate Finance B.V., a private company with limited liability incorporated in the ' +
               'Netherlands. Registered office in Amsterdam.' +
             "</p>" +
+            '<p class="hg-footer__licence">' + LICENCE_STATEMENT + "</p>" +
           "</div>" +
 
           '<div class="hg-footer__col">' +
@@ -54,12 +51,10 @@
           "</div>" +
 
           '<div class="hg-footer__col">' +
-            "<h4>Legal</h4>" +
+            "<h4>Legal/Compliance</h4>" +
             "<ul>" +
-              '<li><a href="' + url("legal/licences/index.html") + '">Licences</a></li>' +
+              '<li><a href="' + url("legal/disclosures/index.html") + '">Disclosures</a></li>' +
               '<li><a href="' + url("legal/micar/index.html") + '">MiCAR</a></li>' +
-              '<li><a href="' + url("legal/risk-disclosure/index.html") + '">Risk Disclosure</a></li>' +
-              '<li><a href="' + url("legal/conflicts-of-interest/index.html") + '">Conflicts of interest</a></li>' +
               '<li><a href="' + url("legal/complaints/index.html") + '">Complaints</a></li>' +
               '<li><a href="' + url("legal/marketing-communications-policy/index.html") + '">Marketing communications</a></li>' +
             "</ul>" +

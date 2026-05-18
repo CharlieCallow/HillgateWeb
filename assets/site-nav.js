@@ -44,12 +44,10 @@
           '<li class="hg-nav__item"><a class="hg-nav__link" href="' + url("access/index.html") + '">How it works</a></li>' +
           '<li class="hg-nav__item"><a class="hg-nav__link" href="' + url("about/index.html") + '">About</a></li>' +
           '<li class="hg-nav__item">' +
-            '<button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-legal">Legal' + caret() + "</button>" +
+            '<button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-legal">Legal/Compliance' + caret() + "</button>" +
             '<ul class="hg-nav__dropdown" id="hg-nav-legal" data-open="false">' +
-              '<li><a href="' + url("legal/licences/index.html") + '">Licences</a></li>' +
+              '<li><a href="' + url("legal/disclosures/index.html") + '">Disclosures</a></li>' +
               '<li><a href="' + url("legal/micar/index.html") + '">MiCAR</a></li>' +
-              '<li><a href="' + url("legal/risk-disclosure/index.html") + '">Risk Disclosure</a></li>' +
-              '<li><a href="' + url("legal/conflicts-of-interest/index.html") + '">Conflicts of interest</a></li>' +
               '<li><a href="' + url("legal/complaints/index.html") + '">Complaints</a></li>' +
               '<li><a href="' + url("legal/marketing-communications-policy/index.html") + '">Marketing communications</a></li>' +
             "</ul>" +
