@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="hg-base" content="../" />
-  <title>Request institutional access, Hillgate Finance</title>
-  <meta name="description" content="Channel for regulated EEA institutional counterparties to request access to Hillgate Finance's payment, FX and settlement services. Onboarding is mediated." />
+  <title>Request access, Hillgate Finance</title>
+  <meta name="description" content="Register interest in Hillgate Finance's institutional payment, currency exchange and crypto-asset exchange services. Onboarding is mediated. No self-service account creation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,11 +17,12 @@
   <main>
     <section class="hg-page-header">
       <div class="hg-container">
-        <span class="hg-page-header__eyebrow">Contact</span>
-        <h1 class="hg-page-header__title">Request institutional access.</h1>
+        <span class="hg-page-header__eyebrow">Request access</span>
+        <h1 class="hg-page-header__title">Request access.</h1>
         <p class="hg-page-header__lede">
-          Use the form below to register interest in Hillgate's services. Onboarding is mediated.
-          No account functionality is accessible to a user before onboarding is complete.
+          Register your institution's interest below. A member of the onboarding team will reply
+          with the documentation required to begin due diligence. Hillgate onboards
+          institutional counterparties only.
         </p>
       </div>
     </section>
@@ -29,41 +30,31 @@
     <section class="hg-page-body">
       <div class="hg-container">
 
-        <div class="hg-standing-summary">
-          <p>
-            <strong>Eligibility.</strong> Hillgate onboards regulated EEA institutional
-            counterparties only. The application form below does not create an account. It opens
-            a conversation with the onboarding team.
-          </p>
-          <p>
-            <strong>Before you submit.</strong> The
-            <a href="../legal/licences/index.html">licences</a>, <a href="../legal/fees/index.html">fees</a> and
-            <a href="../legal/risk-disclosure/index.html">risk disclosure</a> are publicly readable. The
-            <a href="../access/index.html">How it works</a> page describes the web-app and API channels.
-          </p>
-        </div>
-
         <div class="hg-grid-2">
 
           <article class="hg-card">
             <h2>Institutional onboarding enquiry</h2>
             <p class="hg-panel__small" style="margin-bottom: var(--hg-s-4);">
-              This is a mockup. The form does not submit. In production it routes to the
-              onboarding team.
+              Required fields are marked. This form opens a conversation with the onboarding
+              team. It does not create an account.
             </p>
             <form class="hg-form" onsubmit="event.preventDefault(); return false;">
               <div style="display: grid; gap: var(--hg-s-3);">
                 <label style="display: grid; gap: 4px;">
                   <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Legal entity name</span>
-                  <input type="text" required style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px;" />
+                  <input type="text" required placeholder="e.g. Hillgate Finance B.V." style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px;" />
                 </label>
                 <label style="display: grid; gap: 4px;">
                   <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Country of incorporation</span>
-                  <input type="text" required style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px;" />
+                  <input type="text" required placeholder="e.g. Netherlands" style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px;" />
                 </label>
                 <label style="display: grid; gap: 4px;">
-                  <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Regulatory status (supervisor and licence type)</span>
-                  <input type="text" required style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px;" />
+                  <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Country of regulation</span>
+                  <input type="text" placeholder="e.g. Netherlands" style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px;" />
+                </label>
+                <label style="display: grid; gap: 4px;">
+                  <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Regulatory authorisation</span>
+                  <input type="text" placeholder="e.g. DNB / AFM registration number" style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px;" />
                 </label>
                 <label style="display: grid; gap: 4px;">
                   <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Contact name</span>
@@ -73,16 +64,27 @@
                   <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Work email</span>
                   <input type="email" required style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px;" />
                 </label>
-                <label style="display: grid; gap: 4px;">
-                  <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Products of interest</span>
-                  <select required style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px; background-color: var(--hg-surface);">
-                    <option value="">Select</option>
-                    <option>Third-Party Payments</option>
-                    <option>FX Trading</option>
-                    <option>Instant Settlement Network</option>
-                    <option>More than one</option>
-                  </select>
-                </label>
+                <fieldset style="border: 0; padding: 0; margin: 0;">
+                  <legend style="font-size: 13px; font-weight: 600; color: var(--hg-muted); margin-bottom: var(--hg-s-2);">Services of interest</legend>
+                  <div style="display: grid; gap: var(--hg-s-2);">
+                    <label style="display: flex; gap: var(--hg-s-2); align-items: flex-start; font-size: 14px;">
+                      <input type="checkbox" name="service" value="third-party-payments" style="margin-top: 3px;" />
+                      <span>Third-Party Payments</span>
+                    </label>
+                    <label style="display: flex; gap: var(--hg-s-2); align-items: flex-start; font-size: 14px;">
+                      <input type="checkbox" name="service" value="currency-exchange" style="margin-top: 3px;" />
+                      <span>Currency exchange (fiat, under the EMI licence)</span>
+                    </label>
+                    <label style="display: flex; gap: var(--hg-s-2); align-items: flex-start; font-size: 14px;">
+                      <input type="checkbox" name="service" value="crypto-asset-exchange" style="margin-top: 3px;" />
+                      <span>Crypto-asset exchange (supported EMTs, under the MiCAR licence)</span>
+                    </label>
+                    <label style="display: flex; gap: var(--hg-s-2); align-items: flex-start; font-size: 14px;">
+                      <input type="checkbox" name="service" value="instant-settlement" style="margin-top: 3px;" />
+                      <span>Instant Settlement Network</span>
+                    </label>
+                  </div>
+                </fieldset>
                 <label style="display: grid; gap: 4px;">
                   <span style="font-size: 13px; font-weight: 600; color: var(--hg-muted);">Brief description of intended use</span>
                   <textarea rows="4" required style="padding: 10px 12px; border: 1px solid var(--hg-border); border-radius: var(--hg-radius-sm); font-family: inherit; font-size: 14px; resize: vertical;"></textarea>
@@ -96,6 +98,9 @@
 
           <article class="hg-card">
             <h2>Direct channels</h2>
+            <p style="color: var(--hg-muted); font-size: 14px; margin-bottom: var(--hg-s-4);">
+              Reach the relevant Hillgate team directly. We reply within Dutch business hours.
+            </p>
             <dl class="hg-deflist">
               <div>
                 <dt>Onboarding</dt>
@@ -118,8 +123,7 @@
                 <dd>
                   <address>
                     Hillgate Finance B.V.<br />
-                    [TODO: street and number]<br />
-                    [TODO: postcode] Amsterdam<br />
+                    Amsterdam<br />
                     Netherlands
                   </address>
                 </dd>
@@ -137,8 +141,8 @@
     </section>
   </main>
 
-  <div data-regulatory-footer data-rfi="Q28" data-rfi-label="Q28 · Persistent risk and licence warning"></div>
-  <div data-site-footer data-rfi="Q28" data-rfi-label="Q28 · Standing footer link set"></div>
+  <div data-regulatory-footer></div>
+  <div data-site-footer></div>
 
   <script src="../assets/site-nav.js"></script>
   <script src="../assets/site-footer.js"></script>

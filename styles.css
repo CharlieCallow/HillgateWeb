@@ -756,8 +756,22 @@ li {
 .hg-footer {
   background-color: var(--hg-navy);
   color: #FFFFFF;
-  padding: var(--hg-s-8) 0 0;
+  padding: var(--hg-s-7) 0 0;
   flex-shrink: 0;
+}
+
+.hg-footer__licence {
+  padding: 0 0 var(--hg-s-6) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: var(--hg-s-7);
+}
+
+.hg-footer__licence p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 105ch;
 }
 
 .hg-footer a {
@@ -836,6 +850,53 @@ li {
 .hg-footer__bottom-meta {
   font-family: var(--hg-font);
   letter-spacing: 0.02em;
+}
+
+/* CTA band, full-bleed dark band used on the home page */
+
+.hg-cta-band {
+  padding: var(--hg-s-7) 0;
+  background-color: var(--hg-navy);
+  color: #FFFFFF;
+}
+
+.hg-cta-band__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--hg-s-6);
+  align-items: center;
+}
+
+.hg-cta-band h2 {
+  color: #FFFFFF;
+  margin: 0 0 var(--hg-s-3) 0;
+}
+
+.hg-cta-band p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 60ch;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hg-cta-band__action {
+  background-color: #FFFFFF;
+  color: var(--hg-navy);
+  border-color: #FFFFFF;
+}
+
+.hg-cta-band__action:hover {
+  background-color: #F5F6F8;
+  color: var(--hg-navy);
+  border-color: #F5F6F8;
+}
+
+@media (max-width: 768px) {
+  .hg-cta-band__inner {
+    grid-template-columns: 1fr;
+    gap: var(--hg-s-4);
+  }
 }
 
 /* Regulatory strip, sits above the primary footer on every page */

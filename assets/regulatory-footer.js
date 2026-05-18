@@ -2,30 +2,26 @@
  * Single source-of-truth regulatory footer.
  *
  * Every public page renders this strip immediately above the primary footer.
- * To update the wording or the supervisor addresses, edit this file. The change
- * propagates to every page on the next load.
+ * To update the wording, edit this file. The change propagates to every page
+ * on the next load.
+ *
+ * The canonical licence statement lives in assets/site-footer.js (rendered as
+ * the entity statement in the primary footer). This strip carries only the
+ * brief risk line that institutional counterparties should see on every page.
  */
 (function () {
   "use strict";
 
   var BODY =
-    "Crypto-assets are unregulated in many jurisdictions and their value can fall as well as rise. " +
-    "You may lose some or all of the funds you commit. " +
-    "Hillgate Finance B.V. is an electronic money institution authorised by De Nederlandsche Bank " +
-    "(register WFTEG R200389). Hillgate's application for authorisation as a crypto-asset service " +
-    "provider under MiCAR is under assessment by the Autoriteit Financiële Markten. " +
-    "Crypto-asset services will commence following authorisation.";
-
-  var SUPERVISORS =
-    "De Nederlandsche Bank, Spaklerweg 4, 1096 BA Amsterdam. " +
-    "Autoriteit Financiële Markten, Vijzelgracht 50, 1017 HS Amsterdam.";
+    "Risk Disclosure. The value of crypto-assets can fall as well as rise and may be highly volatile. " +
+    "Counterparties may lose some or all of the funds committed to a position. " +
+    "Read the full Risk Disclosure before transacting.";
 
   function render() {
     return (
-      '<aside class="hg-regulatory-strip" role="region" aria-label="Regulatory notice">' +
+      '<aside class="hg-regulatory-strip" role="region" aria-label="Risk Disclosure">' +
         '<div class="hg-container hg-regulatory-strip__inner">' +
           '<p class="hg-regulatory-strip__body">' + BODY + "</p>" +
-          '<p class="hg-regulatory-strip__supervisors">' + SUPERVISORS + "</p>" +
         "</div>" +
       "</aside>"
     );

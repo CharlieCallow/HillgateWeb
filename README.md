@@ -31,22 +31,21 @@ regardless of how deep the current page is.
 |---|---|
 | `/` | `index.html` |
 | `/products/third-party-payments` | `products/third-party-payments/index.html` |
-| `/products/fx-trading` | `products/fx-trading/index.html` |
+| `/products/exchange` | `products/exchange/index.html` |
 | `/products/instant-settlement` | `products/instant-settlement/index.html` |
 | `/access` | `access/index.html` |
 | `/about` | `about/index.html` |
-| `/contact` | `contact/index.html` |
+| `/contact` | `contact/index.html` (Request access) |
 | `/legal/licences` | `legal/licences/index.html` |
-| `/legal/disclosures` | `legal/disclosures/index.html` |
-| `/legal/fees` | `legal/fees/index.html` |
+| `/legal/micar` | `legal/micar/index.html` |
 | `/legal/risk-disclosure` | `legal/risk-disclosure/index.html` |
 | `/legal/conflicts-of-interest` | `legal/conflicts-of-interest/index.html` |
 | `/legal/complaints` | `legal/complaints/index.html` |
-| `/legal/environmental-disclosures` | `legal/environmental-disclosures/index.html` |
 | `/legal/marketing-communications-policy` | `legal/marketing-communications-policy/index.html` |
 | `/legal/terms` | `legal/terms/index.html` |
 | `/legal/privacy` | `legal/privacy/index.html` |
 | `/legal/cookies` | `legal/cookies/index.html` |
+| `/legal/pdfs/*` | MiCAR policy and disclosure PDFs (placeholders pending Erik) |
 
 ## AFM RFI highlight mode
 
@@ -138,16 +137,14 @@ CSS custom properties on `:root` in `styles.css`:
 
 ## Regulatory framing
 
-- The EMI authorisation is named with the exact wording: "Payment services are provided by Hillgate
-  Finance B.V. under an electronic money institution authorisation issued by De Nederlandsche Bank
-  under the Wet op het financieel toezicht, register entry WFTEG R200389."
-- The MiCAR position is named with the exact wording: "Crypto-asset services (custody and
-  administration, exchange, transfer services) are not yet provided. Hillgate has submitted an
-  application for authorisation as a crypto-asset service provider under Regulation (EU)
-  2023/1114 (MiCAR) to the Autoriteit Financiële Markten (AFM). Services will commence following
-  authorisation."
-- Until the MiCAR authorisation is granted, the regulatory footer uses the phrase "under
-  assessment by the Autoriteit Financiële Markten" and nothing stronger.
+- The canonical licence statement is rendered in the site footer on every page:
+  "Hillgate Finance B.V. offers electronic money services to its clients subject to a licence
+  granted by De Nederlandsche Bank (R200389) and offers crypto-asset services subject to its
+  licence granted by Stichting Autoriteit Financiële Markten (rxxxxx)."
+- The wording lives in `assets/site-footer.js`. Update it there to propagate site-wide.
+- The MiCAR register reference is `rxxxxx` until the AFM assigns the entry. Do not state a
+  specific MiCAR register number until it is issued.
+- The DNB EMI register reference is `R200389` (real, stable).
 - The Stichting Hillgate Finance / Deutsche Bank safeguarding arrangement is named on the
   Licences page.
 
@@ -162,15 +159,18 @@ CSS custom properties on `:root` in `styles.css`:
 Real content gaps to close before launch. Grep the source for `TODO`:
 
 ```bash
-grep -rn "TODO" --include="*.html" --include="*.md" .
+grep -rn "TODO" --include="*.html" --include="*.md" --include="*.js" .
 ```
 
 Categories:
 
-- Legal entity placeholders on the Licences page (`[TODO: KvK number]`, registered address, LEI).
-- Numeric fees on the Fees page (`[TODO]` and `€[TODO]`).
+- MiCAR register number: replace the agreed `rxxxxx` placeholder once the AFM assigns the entry.
+- MiCAR policy and disclosure PDFs in `legal/pdfs/`: replace the placeholder PDFs with the final
+  documents prepared by Erik.
+- Crypto-asset exchange fee structure on the MiCAR page: the proposed commercial margin tiers
+  are placeholders pending confirmation with Taher.
 - Leadership placeholder names on `/about/`.
-- "Last updated" dates on the legal pages.
+- "Last updated" dates on the legal pages where one is needed.
 - Cookie inventory on `/legal/cookies/`.
 - Complaints page response timeline values, gated on the response to RFI Q70.
 

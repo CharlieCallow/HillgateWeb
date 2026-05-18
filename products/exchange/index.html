@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="hg-base" content="../../" />
+  <title>Currency and crypto-asset exchange, Hillgate Finance</title>
+  <meta name="description" content="Fiat currency exchange under Hillgate's DNB electronic money institution licence, and crypto-asset exchange of supported electronic money tokens under the AFM MiCAR licence. Hillgate is the counterparty to every transaction." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div data-site-nav></div>
+
+  <main>
+    <section class="hg-page-header">
+      <div class="hg-container">
+        <span class="hg-page-header__eyebrow">Products</span>
+        <h1 class="hg-page-header__title">Currency and crypto-asset exchange.</h1>
+        <p class="hg-page-header__lede">
+          Two distinct services under two distinct licences. Fiat currency exchange runs under
+          Hillgate's electronic money institution licence. Crypto-asset exchange of supported
+          electronic money tokens runs under Hillgate's MiCAR licence. Hillgate is the
+          counterparty to every transaction.
+        </p>
+      </div>
+    </section>
+
+    <section class="hg-page-body">
+      <div class="hg-container">
+
+        <div class="hg-stack hg-stack--lg">
+
+          <!-- ===================== FIAT (EMI) ===================== -->
+          <section aria-labelledby="fiat-heading">
+            <div class="hg-callout" style="border-left-color: var(--hg-success); background-color: rgba(16, 185, 129, 0.05);">
+              <p style="font-weight: 600; color: var(--hg-navy); margin-bottom: 4px;">Fiat currency exchange</p>
+              <p>Provided under the electronic money institution licence granted by De Nederlandsche Bank (R200389).</p>
+            </div>
+
+            <h2 id="fiat-heading" style="margin-top: var(--hg-s-5);">Currency exchange</h2>
+
+            <article class="hg-card">
+              <h3>What this service is</h3>
+              <p>
+                Hillgate exchanges one supported fiat currency for another. The client transacts
+                with Hillgate as principal: Hillgate is the counterparty to the exchange. The
+                client requests a rate, Hillgate offers a rate, and the client chooses whether to
+                transact at that rate. There is no order book and no third-party broker.
+              </p>
+              <p>
+                Settled funds move between the client's e-money balances. Settlement speed
+                depends on the currency and rail involved. SEPA-area currencies typically settle
+                same day. Currencies routed via correspondent banking can take longer.
+              </p>
+            </article>
+
+            <article class="hg-card">
+              <h3>How pricing works</h3>
+              <p>
+                There is no per-transaction fee table for fiat currency exchange. Pricing is
+                embedded in the rate Hillgate offers. The rate quoted to the client is the rate
+                executed: the spread to a reference rate is not unbundled at execution time.
+              </p>
+              <p>
+                Commercial terms are agreed bilaterally per client and reflect expected monthly
+                volume, currencies in scope, and operational requirements. Bespoke terms are
+                documented in the account agreement, which prevails over any indicative pricing.
+              </p>
+            </article>
+
+            <article class="hg-card">
+              <h3>Who uses it</h3>
+              <ul>
+                <li>Corporate treasury functions converting between currencies for invoice settlement.</li>
+                <li>Asset managers consolidating multi-currency positions inside a single institutional account.</li>
+                <li>Fintech partners offering currency conversion to their own counterparties under a documented programme.</li>
+              </ul>
+            </article>
+
+            <article class="hg-card">
+              <h3>How clients access this service</h3>
+              <p>
+                Clients use the web application or the Hillgate API after onboarding. Both
+                channels support request-for-quote, acceptance and execution. The per-channel
+                matrix is on the <a href="../../access/index.html">How it works</a> page.
+              </p>
+            </article>
+          </section>
+
+          <!-- ===================== CRYPTO (MiCAR) ===================== -->
+          <section aria-labelledby="crypto-heading">
+            <div class="hg-callout" style="border-left-color: var(--hg-info); background-color: rgba(59, 130, 246, 0.05); margin-top: var(--hg-s-7);">
+              <p style="font-weight: 600; color: var(--hg-navy); margin-bottom: 4px;">Crypto-asset exchange</p>
+              <p>Provided under the MiCAR licence granted by Stichting Autoriteit Financiële Markten (rxxxxx).</p>
+            </div>
+
+            <h2 id="crypto-heading" style="margin-top: var(--hg-s-5);">Crypto-asset exchange</h2>
+
+            <article class="hg-card">
+              <h3>What this service is</h3>
+              <p>
+                Hillgate exchanges supported electronic money tokens (EMTs) for funds, and for
+                other supported EMTs. The client transacts with Hillgate as principal: the client
+                is contractually facing Hillgate, not an underlying venue or wallet
+                counterparty. Hillgate sources liquidity from the EMT issuers, authorised
+                distributors and other professional liquidity providers in line with its
+                execution approach.
+              </p>
+              <p>
+                At launch, the supported EMTs are <strong>EURC</strong> (issued by Circle) and
+                <strong>USDC</strong> (issued by Circle). Additional EMTs will be added through
+                the firm's product approval process. Tokens that are not EMTs are not in scope of
+                this service.
+              </p>
+            </article>
+
+            <article class="hg-card">
+              <h3>How the price is formed</h3>
+              <p>
+                Pricing is request-for-quote. The client requests a quote through the web
+                application or the API for a specified pair and notional. Hillgate returns a
+                firm, all-in price valid for <strong>15 seconds</strong>. If the client accepts
+                within that window, Hillgate executes at the quoted price. If the window expires,
+                the client requests a new quote.
+              </p>
+              <p>
+                The all-in price has two components, both disclosed on the quote: a base spread
+                that reflects the cost of conversion attributable to the issuer or authorised
+                distributor (minting, redemption, directly attributable settlement costs), and a
+                commercial margin agreed with the client. The base spread is the same for all
+                clients for a given EMT. The commercial margin is agreed bilaterally and reflects
+                monthly and anticipated transaction volume. The full fee structure is on the
+                <a href="../../legal/micar/index.html#exchange-fee">MiCAR page</a>.
+              </p>
+            </article>
+
+            <article class="hg-card">
+              <h3>Settlement</h3>
+              <p>
+                Settlement is near-instant. The fiat leg debits or credits the client's e-money
+                balance held under the EMI licence. The crypto-asset leg debits or credits the
+                client's custodied balance held under the MiCAR licence. Both legs are recorded
+                inside the institutional account.
+              </p>
+            </article>
+
+            <article class="hg-card">
+              <h3>EMT-to-EMT conversions</h3>
+              <p>
+                An exchange from one EMT to another EMT (for example, USDC to EURC) is executed
+                as two independent transactions: a redemption of the first EMT into its
+                reference fiat, followed by a purchase of the second EMT against the reference
+                fiat of the second EMT. The client sees both legs on the trade confirmation and
+                in the account statement. The two-leg model reflects how liquidity is sourced
+                from EMT issuers and authorised distributors and how each EMT settles against its
+                reference currency.
+              </p>
+            </article>
+
+            <article class="hg-card">
+              <h3>How clients access this service</h3>
+              <p>
+                Clients use the web application or the Hillgate API after onboarding. The
+                request-for-quote, quote acceptance and execution flows are available in both
+                channels. The per-channel matrix is on the
+                <a href="../../access/index.html">How it works</a> page.
+              </p>
+            </article>
+
+            <article class="hg-card">
+              <h3>Fees</h3>
+              <p>
+                The crypto-asset exchange fee structure is published on the
+                <a href="../../legal/micar/index.html#exchange-fee">MiCAR page</a>, alongside the
+                MiCAR-mandated policies. Disclosure follows Article 66(4) of Regulation (EU)
+                2023/1114.
+              </p>
+            </article>
+
+            <article class="hg-card">
+              <h3>Risks</h3>
+              <p>
+                Crypto-asset exchange carries market, custody, operational, technology,
+                regulatory and transfer risk. The full
+                <a href="../../legal/risk-disclosure/index.html">Risk Disclosure</a> describes
+                each category and how it is managed.
+              </p>
+            </article>
+          </section>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div data-regulatory-footer></div>
+  <div data-site-footer></div>
+
+  <script src="../../assets/site-nav.js"></script>
+  <script src="../../assets/site-footer.js"></script>
+  <script src="../../assets/regulatory-footer.js"></script>
+  <script src="../../assets/rfi-highlight.js"></script>
+</body>
+</html>
