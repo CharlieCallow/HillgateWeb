@@ -1,11 +1,11 @@
 /*
  * Single source-of-truth regulatory strip.
  *
- * The strip is injected at the top of every public page and stays sticky
- * underneath the viewport top while the page scrolls, so the risk warning
- * is visible at all times (like the disclosure bars on major exchanges).
- * The strip and the primary navigation share a single sticky wrapper so
- * they stack cleanly without overlap.
+ * The strip is injected directly below the primary navigation and above
+ * the page content, so the risk warning is the first thing a visitor sees
+ * underneath the header. The strip and the navigation share a single
+ * sticky wrapper so they stack cleanly without overlap and both remain
+ * pinned to the viewport top while the page scrolls.
  *
  * To update the wording, edit this file. The change propagates to every
  * page on the next load.
@@ -47,8 +47,8 @@
     wrapper.className = "hg-top-stack";
 
     nav.parentNode.insertBefore(wrapper, nav);
-    wrapper.appendChild(buildStrip());
     wrapper.appendChild(nav);
+    wrapper.appendChild(buildStrip());
   }
 
   if (document.readyState === "loading") {
