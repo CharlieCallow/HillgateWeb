@@ -821,7 +821,6 @@ li {
   font-size: 12px;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.55);
-  max-width: 36ch;
 }
 
 .hg-footer a {
@@ -851,7 +850,6 @@ li {
   font-size: 14px;
   line-height: 1.55;
   margin: 0;
-  max-width: 32ch;
 }
 
 .hg-footer__col h4 {
@@ -882,7 +880,6 @@ li {
   font-size: 12px;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.55);
-  max-width: 36ch;
 }
 
 .hg-footer__bottom {
@@ -960,6 +957,7 @@ li {
 }
 
 .hg-regulatory-strip__inner {
+  max-width: none;
   padding: var(--hg-s-2) var(--hg-s-5);
   display: grid;
   gap: var(--hg-s-1);
@@ -967,9 +965,20 @@ li {
 
 .hg-regulatory-strip__body {
   margin: 0;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.45;
   color: #4B3B0A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1100px) {
+  .hg-regulatory-strip__body {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
 }
 
 .hg-regulatory-strip__supervisors {

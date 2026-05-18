@@ -18,7 +18,7 @@
 
   var BODY =
     "Risk Disclosure. The value of crypto-assets can fall as well as rise and may be highly volatile. " +
-    "Counterparties may lose some or all of the funds committed to a position. " +
+    "Counterparties may lose some or all of the funds committed. " +
     "Read the full Risk Disclosure before transacting.";
 
   function buildStrip() {
