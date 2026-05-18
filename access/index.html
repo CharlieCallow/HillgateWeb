@@ -39,7 +39,7 @@
           </p>
           <p>
             To begin the onboarding process, use the
-            <a href="../contact/index.html">Request institutional access</a> form.
+            <a href="../contact/index.html">Request access</a> form.
           </p>
         </div>
 
@@ -56,9 +56,9 @@
                 <ul>
                   <li>Beneficiary management, including trusting and untrusting beneficiaries.</li>
                   <li>Payment initiation (Third-Party Payments).</li>
-                  <li>FX quote, confirm and execute.</li>
+                  <li>Currency exchange and crypto-asset exchange: request quote, accept quote, execute.</li>
                   <li>Settlement instruction within the Instant Settlement Network.</li>
-                  <li>Crypto-asset custody operations (available following MiCAR authorisation).</li>
+                  <li>Crypto-asset custody operations: deposit, hold, withdraw.</li>
                   <li>Transaction history, statements, audit log export.</li>
                   <li>API key management, user and permission management, 2FA settings.</li>
                   <li>Network membership, opt-in and opt-out.</li>
@@ -74,14 +74,14 @@
                 <p>An authenticated programmatic interface. The surface is intentionally narrow and excludes actions that require manual review.</p>
                 <h4>Includes</h4>
                 <ul>
-                  <li>Trading initiation (FX Trading: request quote, accept quote, execute).</li>
+                  <li>Currency and crypto-asset exchange: request quote, accept quote, execute.</li>
                   <li>Transfer instructions to previously trusted beneficiaries (fiat payments only).</li>
                   <li>Transaction information retrieval, statements and reconciliation endpoints.</li>
                 </ul>
                 <h4>Excludes</h4>
                 <ul class="hg-choice__card--excludes">
                   <li>Trusting or untrusting a beneficiary. The beneficiary trusting workflow is web-app only.</li>
-                  <li>Custody-related actions. Crypto-asset custody operations are web-app only and become available following MiCAR authorisation.</li>
+                  <li>Custody-related actions. Crypto-asset custody operations are web-app only.</li>
                   <li>Account opening or change to account configuration.</li>
                   <li>Full product information, fees and risk disclosures. Those are read on this site, not retrieved through the API.</li>
                   <li>API onboarding. API keys are issued only after web-app onboarding is complete and a key is requested in the web application.</li>
@@ -122,7 +122,7 @@
                   <td class="is-supported">Supported</td>
                 </tr>
                 <tr>
-                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">FX Trading</th>
+                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Currency and crypto-asset exchange</th>
                 </tr>
                 <tr>
                   <td>Request and accept quote</td>
@@ -130,7 +130,7 @@
                   <td class="is-supported">Supported</td>
                 </tr>
                 <tr>
-                  <td>Execute FX trade</td>
+                  <td>Execute exchange</td>
                   <td class="is-supported">Supported</td>
                   <td class="is-supported">Supported</td>
                 </tr>
@@ -158,21 +158,16 @@
                   <td class="is-supported">Supported</td>
                 </tr>
                 <tr>
-                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Crypto-asset services (available following MiCAR authorisation)</th>
+                  <th scope="row" colspan="3" style="background-color: var(--hg-bg); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">Crypto-asset services</th>
                 </tr>
                 <tr>
                   <td>Custody operations (deposit, hold, withdraw)</td>
-                  <td class="is-supported">Will be web-app only</td>
+                  <td class="is-supported">Supported</td>
                   <td class="is-unsupported">Not supported</td>
                 </tr>
                 <tr>
                   <td>Crypto-asset transfer</td>
-                  <td class="is-supported">Web-app only</td>
-                  <td class="is-unsupported">Not supported</td>
-                </tr>
-                <tr>
-                  <td>Crypto-asset exchange (against fiat or another crypto-asset)</td>
-                  <td class="is-supported">Web-app only at launch; API support will be considered subsequently</td>
+                  <td class="is-supported">Supported</td>
                   <td class="is-unsupported">Not supported</td>
                 </tr>
                 <tr>
@@ -217,11 +212,12 @@
               </li>
             </ul>
             <p>
-              The <a href="../legal/fees/index.html">fees schedule</a> and the
-              <a href="../legal/risk-disclosure/index.html">risk disclosure</a> are publicly available so they
-              can be read before any commitment to onboard. The
-              <a href="../legal/licences/index.html">licences page</a> describes the legal regime under which
-              each product is provided.
+              The <a href="../legal/micar/index.html">MiCAR</a> page sets out the crypto-asset
+              exchange fee structure and the operational policies. The
+              <a href="../legal/risk-disclosure/index.html">Risk Disclosure</a> is publicly
+              available so it can be read before any commitment to onboard. The
+              <a href="../legal/licences/index.html">Licences</a> page describes the legal regime
+              under which each service is provided.
             </p>
           </section>
 
@@ -240,7 +236,7 @@
               disclosures, and an enquiry form for prospective counterparties.
             </p>
             <p style="margin-top: var(--hg-s-5);">
-              <a class="hg-button-primary" href="../contact/index.html">Request institutional access</a>
+              <a class="hg-button-primary" href="../contact/index.html">Request access</a>
             </p>
           </section>
 

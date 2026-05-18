@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="hg-base" content="../../" />
   <title>Instant Settlement Network, Hillgate Finance</title>
-  <meta name="description" content="A multilateral settlement network for EEA institutional counterparties. Fiat legs operate under the EMI authorisation. Crypto legs commence following MiCAR authorisation." />
+  <meta name="description" content="A multilateral institutional settlement network. Fiat legs settle under Hillgate's electronic money institution licence. Crypto-asset legs settle under Hillgate's MiCAR licence." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,12 +17,12 @@
   <main>
     <section class="hg-page-header">
       <div class="hg-container">
-        <span class="hg-page-header__eyebrow">Products · Instant Settlement Network</span>
+        <span class="hg-page-header__eyebrow">Products</span>
         <h1 class="hg-page-header__title">Instant Settlement Network.</h1>
         <p class="hg-page-header__lede">
-          A multilateral institutional settlement network. Fiat-leg settlement is live under the
-          EMI authorisation. Crypto-asset settlement (custody, transfer, exchange against
-          counterparties on the network) commences following MiCAR authorisation.
+          A multilateral institutional settlement network. Members move funds between each
+          other in near-real time across the rails Hillgate operates: fiat under the
+          electronic money institution licence, crypto-asset under the MiCAR licence.
         </p>
       </div>
     </section>
@@ -30,37 +30,21 @@
     <section class="hg-page-body">
       <div class="hg-container">
 
-        <aside class="hg-regime-banner" aria-label="Regulatory regime for this product" data-rfi="Q16" data-rfi-label="Q16 · Regime banner names the licence">
-          <span class="hg-regime-banner__label">Provided under</span>
-          <div class="hg-regime-banner__pills">
-            <span class="hg-pill hg-pill--active"><span class="hg-pill__dot"></span>Electronic Money Institution authorisation (fiat legs, DNB register WFTEG R200389)</span>
-            <span class="hg-pill hg-pill--pending"><span class="hg-pill__dot"></span>MiCAR (crypto legs, application under assessment by the AFM)</span>
-          </div>
-        </aside>
-
-        <div class="hg-callout hg-callout--warning">
-          <p>
-            Crypto-asset settlement is not currently offered. Until the AFM grants the MiCAR
-            authorisation, only fiat-leg settlement between institutional members is available.
-            See <a href="../../legal/licences/index.html">Licences</a>.
-          </p>
-        </div>
-
         <div class="hg-stack hg-stack--lg">
 
           <article class="hg-card">
             <h2>What this service is</h2>
             <p>
               A network for the multilateral settlement of obligations between regulated
-              institutional members. A member submits a payment or settlement instruction to a
+              institutional members. A member submits a settlement instruction to a
               counterparty also onboarded to the network. The fiat leg is debited from the
-              instructing member's e-money balance and credited to the receiving member's e-money
-              balance.
+              instructing member's e-money balance and credited to the receiving member's
+              e-money balance. The crypto-asset leg, where applicable, debits and credits the
+              relevant custodied balances of each member.
             </p>
             <p>
-              The intended end state, available following MiCAR authorisation, is that crypto-leg
-              settlement uses Hillgate's crypto-asset custody and transfer services to move
-              crypto-assets between members in a single coordinated transaction.
+              Both legs settle in a single coordinated transaction recorded inside each
+              member's institutional account.
             </p>
           </article>
 
@@ -78,19 +62,6 @@
           </article>
 
           <article class="hg-card">
-            <h2>Use cases</h2>
-            <p style="color: var(--hg-muted); margin-bottom: var(--hg-s-3);">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </p>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, multilateral settlement among institutional members.</li>
-              <li>Sed do eiusmod tempor, replacement of bilateral cash settlement arrangements.</li>
-              <li>Ut enim ad minim veniam, future delivery-versus-payment settlement once crypto legs are authorised.</li>
-            </ul>
-          </article>
-
-          <article class="hg-card">
             <h2>How clients access the service</h2>
             <p>
               The full channel matrix is on the <a href="../../access/index.html">How it works</a> page.
@@ -104,37 +75,20 @@
           <article class="hg-card">
             <h2>Fees</h2>
             <p>
-              Network membership and per-settlement fees are listed in the
-              <a href="../../legal/fees/index.html">fees</a> page. Crypto-leg fees will be added once the service
-              is authorised and operational.
+              Network membership and per-settlement fees are determined per client and are
+              documented in the account agreement. Crypto-leg fees are aligned with the
+              crypto-asset exchange fee structure published on the
+              <a href="../../legal/micar/index.html#exchange-fee">MiCAR</a> page.
             </p>
           </article>
 
           <article class="hg-card">
             <h2>Risks</h2>
             <p>
-              Fiat-leg settlement carries operational, technology and transfer risk. Crypto-leg
-              settlement, once live, will additionally carry custody and market risk. The standing
-              <a href="../../legal/risk-disclosure/index.html">risk disclosure</a> describes the full set.
-            </p>
-          </article>
-
-          <article class="hg-card">
-            <h2>Regulatory basis</h2>
-            <p>
-              Fiat legs are provided by Hillgate Finance B.V. under an electronic money
-              institution authorisation issued by De Nederlandsche Bank under the <em>Wet op het
-              financieel toezicht</em>, register entry <strong>WFTEG R200389</strong>.
-            </p>
-            <p>
-              Crypto-asset services (custody and administration, exchange, transfer services) are
-              not yet provided. Hillgate has submitted an application for authorisation as a
-              crypto-asset service provider under Regulation (EU) 2023/1114 to the Autoriteit
-              Financiële Markten. Crypto-leg settlement will commence following authorisation.
-            </p>
-            <p>
-              See <a href="../../legal/licences/index.html">Licences</a> for full regulatory detail and supervisor
-              contact addresses.
+              Fiat-leg settlement carries operational, technology and transfer risk.
+              Crypto-asset-leg settlement additionally carries custody and market risk. The
+              <a href="../../legal/risk-disclosure/index.html">Risk Disclosure</a> describes the
+              full set.
             </p>
           </article>
 
@@ -144,8 +98,8 @@
     </section>
   </main>
 
-  <div data-regulatory-footer data-rfi="Q28" data-rfi-label="Q28 · Persistent risk and licence warning"></div>
-  <div data-site-footer data-rfi="Q28" data-rfi-label="Q28 · Standing footer link set"></div>
+  <div data-regulatory-footer></div>
+  <div data-site-footer></div>
 
   <script src="../../assets/site-nav.js"></script>
   <script src="../../assets/site-footer.js"></script>

@@ -37,7 +37,7 @@
             '<button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-products">Products' + caret() + "</button>" +
             '<ul class="hg-nav__dropdown" id="hg-nav-products" data-open="false">' +
               '<li><a href="' + url("products/third-party-payments/index.html") + '">Third-Party Payments</a></li>' +
-              '<li><a href="' + url("products/fx-trading/index.html") + '">FX Trading</a></li>' +
+              '<li><a href="' + url("products/exchange/index.html") + '">Currency and crypto-asset exchange</a></li>' +
               '<li><a href="' + url("products/instant-settlement/index.html") + '">Instant Settlement Network</a></li>' +
             "</ul>" +
           "</li>" +
@@ -47,20 +47,18 @@
             '<button class="hg-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="hg-nav-legal">Legal' + caret() + "</button>" +
             '<ul class="hg-nav__dropdown" id="hg-nav-legal" data-open="false">' +
               '<li><a href="' + url("legal/licences/index.html") + '">Licences</a></li>' +
-              '<li><a href="' + url("legal/fees/index.html") + '">Fees</a></li>' +
-              '<li><a href="' + url("legal/risk-disclosure/index.html") + '">Risk disclosure</a></li>' +
+              '<li><a href="' + url("legal/micar/index.html") + '">MiCAR</a></li>' +
+              '<li><a href="' + url("legal/risk-disclosure/index.html") + '">Risk Disclosure</a></li>' +
               '<li><a href="' + url("legal/conflicts-of-interest/index.html") + '">Conflicts of interest</a></li>' +
               '<li><a href="' + url("legal/complaints/index.html") + '">Complaints</a></li>' +
-              '<li><a href="' + url("legal/environmental-disclosures/index.html") + '">Environmental disclosures</a></li>' +
               '<li><a href="' + url("legal/marketing-communications-policy/index.html") + '">Marketing communications</a></li>' +
-              '<li><a href="' + url("legal/disclosures/index.html") + '">Disclosures overview</a></li>' +
             "</ul>" +
           "</li>" +
         "</ul>" +
 
         '<div class="hg-nav__cta">' +
           '<a class="hg-nav__login" href="' + url("access/index.html") + '">Client log in</a>' +
-          '<a class="hg-button-primary" href="' + url("contact/index.html") + '">Request institutional access</a>' +
+          '<a class="hg-button-primary" href="' + url("contact/index.html") + '">Request access</a>' +
         "</div>" +
       "</div>"
     );
