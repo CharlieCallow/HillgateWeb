@@ -974,7 +974,6 @@ li {
   font-size: 13px;
   line-height: 1.6;
   color: #4B3B0A;
-  max-width: 95ch;
 }
 
 .hg-regulatory-strip__supervisors {
@@ -982,7 +981,6 @@ li {
   font-size: 12px;
   line-height: 1.55;
   color: #6B5417;
-  max-width: 95ch;
 }
 
 /* Two-column page layout (service / disclosure pages) */
