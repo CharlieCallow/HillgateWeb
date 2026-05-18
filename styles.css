@@ -458,14 +458,12 @@ li {
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: var(--hg-s-5);
-  max-width: 18ch;
 }
 
 .hg-hero__lede {
   font-size: 18px;
   line-height: 1.55;
   color: var(--hg-muted);
-  max-width: 60ch;
   margin-bottom: var(--hg-s-6);
 }
 
@@ -498,14 +496,12 @@ li {
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin-bottom: var(--hg-s-4);
-  max-width: 22ch;
 }
 
 .hg-page-header__lede {
   font-size: 18px;
   line-height: 1.55;
   color: var(--hg-muted);
-  max-width: 60ch;
   margin: 0;
 }
 
@@ -513,7 +509,6 @@ li {
 
 .hg-section-head {
   margin-bottom: var(--hg-s-6);
-  max-width: 60ch;
 }
 
 .hg-section-head__eyebrow {
@@ -929,7 +924,6 @@ li {
 .hg-cta-band p {
   margin: 0;
   color: rgba(255, 255, 255, 0.78);
-  max-width: 60ch;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -964,7 +958,7 @@ li {
 }
 
 .hg-regulatory-strip__inner {
-  padding: var(--hg-s-5) var(--hg-s-5);
+  padding: var(--hg-s-2) 0;
   display: grid;
   gap: var(--hg-s-2);
 }
