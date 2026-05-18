@@ -458,14 +458,12 @@ li {
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: var(--hg-s-5);
-  max-width: 18ch;
 }
 
 .hg-hero__lede {
   font-size: 18px;
   line-height: 1.55;
   color: var(--hg-muted);
-  max-width: 60ch;
   margin-bottom: var(--hg-s-6);
 }
 
@@ -498,14 +496,12 @@ li {
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin-bottom: var(--hg-s-4);
-  max-width: 22ch;
 }
 
 .hg-page-header__lede {
   font-size: 18px;
   line-height: 1.55;
   color: var(--hg-muted);
-  max-width: 60ch;
   margin: 0;
 }
 
@@ -964,15 +960,15 @@ li {
 }
 
 .hg-regulatory-strip__inner {
-  padding: var(--hg-s-5) var(--hg-s-5);
+  padding: var(--hg-s-2) var(--hg-s-5);
   display: grid;
-  gap: var(--hg-s-2);
+  gap: var(--hg-s-1);
 }
 
 .hg-regulatory-strip__body {
   margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.45;
   color: #4B3B0A;
 }
 
